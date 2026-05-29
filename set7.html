@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>郑羽绚 — 六年级历史模拟考试 第7套</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--gold:#d4a017;--gold-bg:#fdf6e3;--green:#1a7a4a;--green-bg:#eaf7ee;--green-b:#27ae60;--red:#c0392b;--red-bg:#fdf0ef;--red-b:#e74c3c;--ink:#2c2c2c;--muted:#666;--border:#ddd;--bg:#fafaf8;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+.hdr{background:var(--navy);color:#fff;padding:1.75rem 1rem 1.25rem;text-align:center;border-bottom:4px solid var(--gold)}
+.hdr-sub{font-size:12px;color:#aab4cc;letter-spacing:.06em;margin-bottom:5px}
+.hdr h1{font-family:'Noto Serif SC',serif;font-size:clamp(17px,4vw,26px);font-weight:700;letter-spacing:.06em}
+.hdr-meta{margin-top:8px;font-size:12px;color:#c0cadc}
+.set-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;margin-top:6px;letter-spacing:.05em}
+.pb-wrap{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:10px auto 0;max-width:360px}
+.pb{background:var(--gold);height:5px;border-radius:99px;transition:width .4s ease;width:0%}
+.pb-lbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
+.nav{background:var(--navy);border-bottom:2px solid rgba(255,255,255,.08);padding:.6rem 1rem;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.nav a{color:#aab4cc;font-size:12px;text-decoration:none;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.15);transition:all .15s}
+.nav a:hover,.nav a.active{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
+.ctr{max-width:760px;margin:0 auto;padding:1.25rem 1rem 4rem}
+.qc{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem;transition:box-shadow .2s}
+.qh{display:flex;align-items:flex-start;gap:10px;margin-bottom:.85rem}
+.qn{background:var(--navy);color:#fff;font-size:11px;font-weight:700;border-radius:99px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qt{font-size:14px;line-height:1.65;font-weight:500;padding-top:3px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.ob{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--border);border-radius:7px;padding:.65rem .9rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
+.ob:hover:not(:disabled){border-color:var(--navy);background:#eef0f8}
+.ol{background:var(--navy);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ob.correct{border-color:var(--green-b);background:var(--green-bg)}.ob.correct .ol{background:var(--green)}
+.ob.wrong{border-color:var(--red-b);background:var(--red-bg)}.ob.wrong .ol{background:var(--red)}
+.ob.reveal{border-color:var(--green-b);background:var(--green-bg);opacity:.75}.ob.reveal .ol{background:var(--green)}
+.exp{display:none;margin-top:.85rem;background:var(--gold-bg);border-left:4px solid var(--gold);border-radius:0 7px 7px 0;padding:.65rem .9rem;font-size:13px;line-height:1.65;color:#5a4a1a}
+.exp.show{display:block}.exp strong{color:var(--navy)}
+.sub-sec{text-align:center;margin:1.75rem 0}
+#subBtn{background:var(--navy);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.8rem 2.75rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
+#subBtn:hover{background:#253560}#subBtn:active{transform:scale(.97)}#subBtn:disabled{background:#aaa;cursor:not-allowed}
+.warn{display:none;color:var(--red);font-size:12.5px;margin-top:.4rem}
+.rp{display:none;background:var(--white);border:2px solid var(--navy);border-radius:14px;padding:2rem 1.5rem;text-align:center;margin:1.75rem 0}
+.rp.show{display:block}
+.sc{width:110px;height:110px;border-radius:50%;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;border:4px solid var(--gold)}
+.sn{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:700;line-height:1}
+.sl{font-size:11px;color:#aab4cc;margin-top:2px}
+.rt{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.rs{font-size:13px;color:var(--muted);margin-bottom:1.25rem}
+.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.25rem}
+.stat{text-align:center}.stn{font-size:26px;font-weight:700;font-family:'Noto Serif SC',serif}
+.stn.c{color:var(--green)}.stn.w{color:var(--red)}.stl{font-size:11px;color:var(--muted)}
+#retBtn{background:transparent;color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:500;padding:.55rem 1.75rem;border:2px solid var(--navy);border-radius:99px;cursor:pointer;transition:background .2s;margin-right:8px}
+#retBtn:hover{background:#eef0f8}
+.nav-next{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:700;padding:.55rem 1.75rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
+@media(max-width:480px){.qt{font-size:13.5px}.ob{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-sub">马来西亚国家小学课程标准 · KSSR · 六年级历史</div>
+  <h1>模拟考试 — 为郑羽绚精心编制</h1>
+  <div class="set-badge">第 7 套 / 共 10 套</div>
+  <div class="hdr-meta">32 题 · 满分 100 分</div>
+  <div class="pb-wrap"><div class="pb" id="pb"></div></div>
+  <div class="pb-lbl" id="pbl">0 / 32 已作答</div>
+</div>
+<div class="nav">
+  <a href="set1.html" class="">第1套</a><a href="set2.html" class="">第2套</a><a href="set3.html" class="">第3套</a><a href="set4.html" class="">第4套</a><a href="set5.html" class="">第5套</a><a href="set6.html" class="">第6套</a><a href="set7.html" class="active">第7套</a><a href="set8.html" class="">第8套</a><a href="set9.html" class="">第9套</a><a href="set10.html" class="">第10套</a>
+</div>
+<div class="ctr" id="qctr"></div>
+<div class="ctr">
+  <div class="sub-sec">
+    <button id="subBtn" onclick="submit()">提交答案 · 查看成绩</button>
+    <div class="warn" id="wn"></div>
+  </div>
+  <div class="rp" id="rp">
+    <div class="sc"><span class="sn" id="scn">0</span><span class="sl">/ 100</span></div>
+    <div class="rt" id="rtitle"></div>
+    <div class="rs" id="rsub"></div>
+    <div class="rstats">
+      <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
+      <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
+    </div>
+    <button id="retBtn" onclick="reset()">重新作答</button>
+    <a class="nav-next" href="set8.html">下一套 →</a>
+  </div>
+</div>
+<script>
+const Q=[{"q": "以下哪个是马来西亚独立后第一个五年计划的主要目标？", "opts": ["工业化", "农业发展与基础设施建设", "减少贫富差距", "推广教育"], "ans": 1, "exp": "独立初期的五年计划主要侧重于农业发展和基础设施建设，如道路、学校、医院等，为经济发展奠基。"}, {"q": "以下哪个机构是马来西亚联邦政府的最高行政机构？", "opts": ["国会", "内阁", "法院", "最高元首"], "ans": 1, "exp": "内阁（Jemaah Menteri）是马来西亚联邦政府的最高行政机构，由首相领导，成员由最高元首根据首相建议委任。"}, {"q": "马来西亚首相必须是哪院的成员？", "opts": ["上议院", "下议院", "两院皆可", "无需是议员"], "ans": 1, "exp": "根据宪法，马来西亚首相必须是下议院（Dewan Rakyat）的成员，并须在下议院获得多数议员支持。"}, {"q": "以下哪个是马来西亚联邦宪法第153条的内容？", "opts": ["伊斯兰教为官方宗教", "马来人特别权利的保障", "最高元首权力", "公民权条款"], "ans": 1, "exp": "联邦宪法第153条规定最高元首有责任保障马来人及沙巴和砂拉越土著的特别地位（Hak Istimewa Bumiputera）。"}, {"q": "以下哪个是马来西亚国家哲学的核心价值？", "opts": ["物质繁荣", "国家团结", "民族优越", "宗教主义"], "ans": 1, "exp": "马来西亚国家哲学和政策的核心是国家团结（Perpaduan Nasional），促进各族和谐共处。"}, {"q": "以下哪项是二战后世界政治格局的主要特征？", "opts": ["全球化", "冷战", "区域整合", "去殖民化"], "ans": 1, "exp": "二战后，美国和苏联形成对立的两大阵营，展开冷战（Cold War），影响包括马来亚在内的众多国家独立进程。"}, {"q": "以下哪个是马来西亚在冷战中的立场？", "opts": ["亲美", "亲苏", "亲中", "不结盟"], "ans": 3, "exp": "马来西亚奉行不结盟政策，不加入美苏任何一方阵营，在冷战中保持中立地位。"}, {"q": "马来西亚的国防军由哪三个军种组成？", "opts": ["陆军、海军、空军", "陆军、海军、警察", "陆军、空军、海岸警卫队", "陆军、海军、国民军"], "ans": 0, "exp": "马来西亚武装部队（Angkatan Tentera Malaysia）由三个军种组成：陆军、皇家海军和皇家空军。"}, {"q": "以下哪个国家于1948年在马来亚对抗共产党活动中提供支援？", "opts": ["美国", "英国", "澳大利亚", "印度"], "ans": 1, "exp": "英国在1948–1960年马来亚紧急状态期间提供军事和行政支援，协助镇压马来亚共产党武装斗争。"}, {"q": "以下哪个是马来西亚多元文化社会的重要象征？", "opts": ["单一语言", "种族隔离", "文化多元共存", "同化政策"], "ans": 2, "exp": "马来西亚以文化多元共存为荣，各族群保留自己的语言、宗教、节日和文化习俗，共同建设国家。"}, {"q": "以下哪个国家在二战期间占领了马来亚？", "opts": ["德国", "意大利", "日本", "苏联"], "ans": 2, "exp": "日本于1941年12月入侵，1942年占领整个马来亚，直至1945年8月日本投降。"}, {"q": "马来亚抗日军（MPAJA）主要由哪个政党组织？", "opts": ["巫统", "马华公会", "马来亚共产党", "劳工党"], "ans": 2, "exp": "马来亚人民抗日军（MPAJA）由马来亚共产党在二战期间组织，是对抗日本占领的主要武装力量。"}, {"q": "以下哪个词语描述了英国在马来亚推行的行政制度？", "opts": ["直接统治", "间接统治", "军事统治", "委任统治"], "ans": 1, "exp": "英国在马来各州实行间接统治（Indirect Rule），通过参政司制度借助马来统治者名义管理各州。"}, {"q": "马来亚联合邦最高专员（High Commissioner）的职责是什么？", "opts": ["代表英国女王", "管理军事", "监督各州参政司", "外交事务"], "ans": 0, "exp": "马来亚联合邦最高专员代表英国君主（女王），是英国在马来亚联合邦的最高代表。"}, {"q": "以下哪个是马来西亚独立时宣读独立宣言的地点？", "opts": ["国家宫", "默迪卡广场", "马六甲苏丹皇宫", "槟城光大"], "ans": 1, "exp": "1957年8月31日，独立宣言在吉隆坡默迪卡广场（Dataran Merdeka）正式宣读。"}, {"q": "以下哪个是新加坡脱离马来西亚的主要原因？", "opts": ["经济发展分歧", "种族与政治政策分歧", "军事冲突", "外国干预"], "ans": 1, "exp": "新加坡人民行动党与马来西亚中央政府在种族政策（马来人特权）和「马来西亚人的马来西亚」口号上存在根本分歧。"}, {"q": "以下哪个马来西亚州属于非马来联邦州（UMS）？", "opts": ["霹雳", "雪兰莪", "吉打", "彭亨"], "ans": 2, "exp": "吉打州属于非马来联邦州（Unfederated Malay States，UMS），其余四个UMS是吉兰丹、玻璃市、丁加奴和柔佛。"}, {"q": "以下哪个事件标志英国正式「管理」霹雳内政？", "opts": ["《邦咯条约》1874年", "《英荷条约》1824年", "《英暹条约》1909年", "《联合邦协议》1948年"], "ans": 0, "exp": "《邦咯条约》（1874年）是英国与霹雳州签订的第一个参政司条约，标志英国正式介入马来各州内政的开始。"}, {"q": "以下哪个是马来亚独立运动中，非马来族群获得的主要权益？", "opts": ["文化自治", "公民权", "语言权利", "土地权"], "ans": 1, "exp": "独立协议中，非马来族群（华裔、印裔等）获得马来亚公民权（Kewarganegaraan），是社会契约的重要部分。"}, {"q": "独立后，以下哪个语言成为马来西亚的官方语言？", "opts": ["英语", "华语", "马来语", "淡米尔语"], "ans": 2, "exp": "马来语（Bahasa Melayu/Bahasa Malaysia）是马来西亚的官方语言，在独立后逐步取代英语成为教育和政府事务的主要用语。"}, {"q": "以下哪个是马来西亚成立时的重要文件？", "opts": ["《马来西亚协议》", "《邦咯条约》", "《英荷条约》", "《英马防卫协定》"], "ans": 0, "exp": "《马来西亚协议》（Malaysia Agreement，1963年）由马来亚、英国、沙巴、砂拉越和新加坡签署，确立马来西亚联邦成立。"}, {"q": "以下哪个是1963年柯博德委员会（Cobbold Commission）的任务？", "opts": ["调查独立后经济问题", "了解沙巴和砂拉越人民是否支持加入马来西亚", "规划吉隆坡发展", "处理新加坡独立问题"], "ans": 1, "exp": "柯博德委员会（1962年）由英国和马来亚联合成立，调查沙巴和砂拉越人民是否支持加入马来西亚联邦。"}, {"q": "以下哪个国家反对马来西亚联邦的成立，甚至发动对抗行动？", "opts": ["泰国", "印度尼西亚", "菲律宾", "越南"], "ans": 1, "exp": "印度尼西亚苏加诺政府反对马来西亚成立，发动「对抗政策」（Konfrontasi，1963–1966年），进行军事和外交对抗。"}, {"q": "菲律宾反对马来西亚成立的原因是什么？", "opts": ["争夺锡矿资源", "宣称对沙巴（北婆罗洲）拥有主权", "宗教分歧", "贸易竞争"], "ans": 1, "exp": "菲律宾宣称对沙巴（北婆罗洲）拥有主权，认为该地区属于菲律宾苏禄苏丹国的领土，因此反对马来西亚成立。"}, {"q": "以下哪个是马来西亚成功抵御「对抗政策」的重要因素？", "opts": ["加入北约", "英联邦军事援助", "与中国结盟", "加入华沙条约"], "ans": 1, "exp": "英国、澳大利亚、新西兰等英联邦国家提供军事援助，帮助马来西亚成功抵御印度尼西亚的「对抗政策」。"}, {"q": "以下哪个政策是1970年推行以解决种族经济不平等？", "opts": ["国家教育政策", "新经济政策", "工业发展计划", "农业改革计划"], "ans": 1, "exp": "新经济政策（DEB，Dasar Ekonomi Baru）于1970年由敦拉萨推行，旨在消除贫穷和重组各族经济地位。"}, {"q": "以下哪个马来西亚节日与先人有关？", "opts": ["卫塞节", "清明节", "屠妖节", "卡迪甘节"], "ans": 1, "exp": "清明节（Ching Ming）是华裔传统节日，用于扫墓祭祖，表达对先人的思念与敬意。"}, {"q": "马来西亚最南端的岛屿是哪个？", "opts": ["浮罗交怡", "邦咯岛", "刁曼岛", "西必洛岛"], "ans": 2, "exp": "刁曼岛（Pulau Tioman）位于柔佛州外海，是马来西亚著名的旅游岛屿之一，以美丽的海景著称。"}, {"q": "以下哪个是马来西亚原住民的统称？", "opts": ["马来人", "土著", "野蛮人", "原住民"], "ans": 1, "exp": "「土著」（Bumiputera，土地之子）是马来人及各原住民族群的统称，他们依据宪法享有特别保障。"}, {"q": "马来西亚半岛的原住民称为什么？", "opts": ["土著", "达雅族", "Orang Asli", "伊班族"], "ans": 2, "exp": "马来半岛的原住民称为「Orang Asli」（土著，原意为「原本的人」），分为多个族群，如Temiar、Senoi、Negrito等。"}, {"q": "砂拉越最大的土著族群是什么？", "opts": ["卡达山族", "伊班族", "比达友族", "马来族"], "ans": 1, "exp": "伊班族（Iban）是砂拉越最大的土著族群，以编织传统织布（Pua Kumbu）和长屋生活著称。"}, {"q": "以下哪个是马来西亚独立后第一个五年计划的主要目标？", "opts": ["工业化", "农业发展与基础设施建设", "减少贫富差距", "推广教育"], "ans": 1, "exp": "独立初期的五年计划主要侧重于农业发展和基础设施建设，如道路、学校、医院等，为经济发展奠基。"}];
+let A=new Array(Q.length).fill(null),done=false;
+function build(){
+  const c=document.getElementById('qctr');c.innerHTML='';
+  Q.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='qc';d.id='qc'+i;
+    const labs=['A','B','C','D'];
+    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${q.q}</div></div>
+    <div class="opts">${q.opts.map((o,j)=>`<button class="ob" id="o${i}_${j}" onclick="pick(${i},${j})"><span class="ol">${labs[j]}</span><span>${o}</span></button>`).join('')}</div>
+    <div class="exp" id="ex${i}"><strong>✓ 解析：</strong>${q.exp}</div>`;
+    c.appendChild(d);
+  });
+}
+function pick(qi,oi){
+  if(done)return;A[qi]=oi;
+  for(let j=0;j<4;j++){const b=document.getElementById('o'+qi+'_'+j);b.style.borderColor='';b.style.background='';}
+  const s=document.getElementById('o'+qi+'_'+oi);s.style.borderColor='#1a2744';s.style.background='#eef0f8';
+  upd();
+}
+function upd(){
+  const n=A.filter(a=>a!==null).length;
+  document.getElementById('pb').style.width=(n/Q.length*100)+'%';
+  document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
+}
+function submit(){
+  const un=A.filter(a=>a===null).length;
+  if(un>0){const w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
+  done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
+  let ok=0;
+  Q.forEach((q,i)=>{
+    const ua=A[i],ra=q.ans,good=ua===ra;if(good)ok++;
+    for(let j=0;j<4;j++){const b=document.getElementById('o'+i+'_'+j);b.style.borderColor='';b.style.background='';b.disabled=true;
+      if(j===ra&&good&&j===ua)b.classList.add('correct');
+      else if(j===ua&&!good)b.classList.add('wrong');
+      else if(j===ra&&!good)b.classList.add('reveal');
+    }
+    if(!good)document.getElementById('ex'+i).classList.add('show');
+  });
+  const sc=Math.round(ok/Q.length*100);
+  document.getElementById('scn').textContent=sc;
+  document.getElementById('cc').textContent=ok;
+  document.getElementById('wc').textContent=Q.length-ok;
+  let t,s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！';}
+  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题，下次更好！';}
+  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错，仔细看解析，进步会更快！';}
+  else{t='📖 再加把劲！';s='羽绚，不要气馁！读懂解析，再来一次必定进步！';}
+  document.getElementById('rtitle').textContent=t;
+  document.getElementById('rsub').textContent=s;
+  document.getElementById('rp').classList.add('show');
+  document.getElementById('rp').scrollIntoView({behavior:'smooth'});
+}
+function reset(){A=new Array(Q.length).fill(null);done=false;document.getElementById('subBtn').disabled=false;document.getElementById('rp').classList.remove('show');build();upd();window.scrollTo({top:0,behavior:'smooth'});}
+build();upd();
+</script>
+</body>
+</html>
