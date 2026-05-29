@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>郑羽绚 - 六年级历史模拟考试</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+  :root {
+    --red: #c0392b;
+    --red-light: #fdf0ef;
+    --red-border: #e74c3c;
+    --gold: #d4a017;
+    --gold-light: #fdf6e3;
+    --green: #1a7a4a;
+    --green-light: #eaf7ee;
+    --green-border: #27ae60;
+    --navy: #1a2744;
+    --navy-light: #eef0f8;
+    --ink: #2c2c2c;
+    --muted: #666;
+    --border: #ddd;
+    --bg: #fafaf8;
+    --white: #fff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  .header {
+    background: var(--navy);
+    color: #fff;
+    padding: 2rem 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+
+  .header-sub {
+    font-size: 13px;
+    color: #aab4cc;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .header-meta {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #c0cadc;
+  }
+
+  .progress-bar-wrap {
+    background: rgba(255,255,255,0.15);
+    border-radius: 99px;
+    height: 6px;
+    margin: 1rem auto 0;
+    max-width: 400px;
+  }
+
+  .progress-bar {
+    background: var(--gold);
+    height: 6px;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+
+  .progress-label {
+    font-size: 12px;
+    color: #aab4cc;
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .question-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .question-card.answered { opacity: 0.92; }
+
+  .q-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .q-number {
+    background: var(--navy);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 99px;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .q-text {
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 500;
+    padding-top: 4px;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 8px; }
+
+  .option-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    transition: border-color 0.15s, background 0.15s;
+    color: var(--ink);
+  }
+
+  .option-btn:hover:not(:disabled) {
+    border-color: var(--navy);
+    background: var(--navy-light);
+  }
+
+  .option-label {
+    background: var(--navy);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .option-btn.correct {
+    border-color: var(--green-border);
+    background: var(--green-light);
+  }
+  .option-btn.correct .option-label { background: var(--green); }
+
+  .option-btn.wrong {
+    border-color: var(--red-border);
+    background: var(--red-light);
+  }
+  .option-btn.wrong .option-label { background: var(--red); }
+
+  .option-btn.reveal {
+    border-color: var(--green-border);
+    background: var(--green-light);
+    opacity: 0.75;
+  }
+  .option-btn.reveal .option-label { background: var(--green); }
+
+  .explanation {
+    display: none;
+    margin-top: 1rem;
+    background: #fff8e1;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem 1rem;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #5a4a1a;
+  }
+
+  .explanation.show { display: block; }
+
+  .explanation strong { color: var(--navy); }
+
+  .submit-section {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  #submitBtn {
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.85rem 3rem;
+    border: none;
+    border-radius: 99px;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  #submitBtn:hover { background: #253560; }
+  #submitBtn:active { transform: scale(0.97); }
+  #submitBtn:disabled { background: #aaa; cursor: not-allowed; }
+
+  .result-panel {
+    display: none;
+    background: var(--white);
+    border: 2px solid var(--navy);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .result-panel.show { display: block; }
+
+  .score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    border: 4px solid var(--gold);
+  }
+
+  .score-number {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .score-label {
+    font-size: 12px;
+    color: #aab4cc;
+    margin-top: 2px;
+  }
+
+  .result-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .result-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .result-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stat { text-align: center; }
+  .stat-n { font-size: 28px; font-weight: 700; font-family: 'Noto Serif SC', serif; }
+  .stat-n.correct-n { color: var(--green); }
+  .stat-n.wrong-n { color: var(--red); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+
+  #retryBtn {
+    background: transparent;
+    color: var(--navy);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.6rem 2rem;
+    border: 2px solid var(--navy);
+    border-radius: 99px;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  #retryBtn:hover { background: var(--navy-light); }
+
+  .unanswered-notice {
+    display: none;
+    color: var(--red);
+    font-size: 13px;
+    margin-top: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-sub">马来西亚国家小学课程标准 · KSSR</div>
+  <h1>六年级历史模拟考试</h1>
+  <div class="header-meta">为郑羽绚精心编制 · 共 32 题 · 满分 100 分</div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
+  <div class="progress-label" id="progressLabel">0 / 32 已作答</div>
+</div>
+
+<div class="container" id="quizContainer"></div>
+
+<div class="container">
+  <div class="submit-section">
+    <button id="submitBtn" onclick="submitQuiz()">提交答案 · 查看成绩</button>
+    <div class="unanswered-notice" id="unansweredNotice">⚠ 请先完成所有 32 道题目再提交。</div>
+  </div>
+  <div class="result-panel" id="resultPanel">
+    <div class="score-circle">
+      <span class="score-number" id="scoreNum">0</span>
+      <span class="score-label">/ 100</span>
+    </div>
+    <div class="result-title" id="resultTitle"></div>
+    <div class="result-sub" id="resultSub"></div>
+    <div class="result-stats">
+      <div class="stat"><div class="stat-n correct-n" id="correctCount">0</div><div class="stat-label">答对</div></div>
+      <div class="stat"><div class="stat-n wrong-n" id="wrongCount">0</div><div class="stat-label">答错</div></div>
+    </div>
+    <button id="retryBtn" onclick="resetQuiz()">重新作答</button>
+  </div>
+</div>
+
+<script>
+const questions = [
+  {
+    q: "马来西亚的国父是谁？",
+    opts: ["东姑阿都拉曼", "敦拉萨", "敦胡先翁", "敦马哈迪"],
+    ans: 0,
+    exp: "东姑阿都拉曼（Tunku Abdul Rahman）被誉为马来西亚国父，他在1957年8月31日领导马来亚独立，并于1963年成立马来西亚联邦。"
+  },
+  {
+    q: "马来亚独立的日期是哪一天？",
+    opts: ["1963年9月16日", "1957年8月31日", "1948年2月1日", "1955年7月27日"],
+    ans: 1,
+    exp: "马来亚于1957年8月31日正式从英国殖民统治下独立。这一天被定为国家独立日（Hari Merdeka）。"
+  },
+  {
+    q: "马来西亚联邦成立于哪一年？",
+    opts: ["1957年", "1959年", "1963年", "1965年"],
+    ans: 2,
+    exp: "马来西亚联邦于1963年9月16日正式成立，由马来亚联合邦、新加坡、沙巴和砂拉越合并组成。"
+  },
+  {
+    q: "以下哪个州属于马来西亚东马部分？",
+    opts: ["雪兰莪", "柔佛", "砂拉越", "吉打"],
+    ans: 2,
+    exp: "砂拉越（Sarawak）位于婆罗洲岛，属于东马来西亚。东马由砂拉越和沙巴两个州组成。"
+  },
+  {
+    q: "马来亚联合邦协议于哪一年签署？",
+    opts: ["1946年", "1948年", "1952年", "1957年"],
+    ans: 1,
+    exp: "马来亚联合邦协议于1948年2月1日签署生效，取代了1946年成立但遭反对的马来亚联盟，恢复了马来统治者的主权。"
+  },
+  {
+    q: "以下哪场战争导致英国暂时离开马来亚？",
+    opts: ["第一次世界大战", "第二次世界大战", "越战", "朝鲜战争"],
+    ans: 1,
+    exp: "第二次世界大战（1939–1945年）期间，日本于1941年12月入侵马来半岛，英军于1942年2月15日在新加坡投降，日本占领了马来亚约三年半。"
+  },
+  {
+    q: "日本占领马来亚的时期是哪段时间？",
+    opts: ["1939年至1942年", "1941年至1945年", "1943年至1946年", "1940年至1944年"],
+    ans: 1,
+    exp: "日本于1941年12月8日入侵马来半岛，直到1945年8月日本投降，占领时期约为1941年至1945年。"
+  },
+  {
+    q: "马来亚紧急状态（Darurat）宣布于哪一年？",
+    opts: ["1945年", "1946年", "1948年", "1950年"],
+    ans: 2,
+    exp: "马来亚紧急状态于1948年6月宣布，原因是马来亚共产党发动武装斗争。紧急状态持续至1960年7月才正式解除。"
+  },
+  {
+    q: "1955年马来亚大选中，哪个联盟赢得压倒性胜利？",
+    opts: ["人民党", "联盟（Perikatan）", "民主行动党", "伊斯兰党"],
+    ans: 1,
+    exp: "1955年7月马来亚举行首次联邦选举，由巫统、马华公会和印度国大党组成的联盟赢得52席中的51席，为独立奠定基础。"
+  },
+  {
+    q: "东姑阿都拉曼在争取独立时担任哪个职位？",
+    opts: ["最高元首", "马来亚首席部长", "英国驻扎官", "苏丹"],
+    ans: 1,
+    exp: "东姑阿都拉曼在1955年大选后出任马来亚联合邦首席部长（Chief Minister），并领导代表团赴英国谈判独立事宜。"
+  },
+  {
+    q: "以下哪个国家曾经统治马来亚最长时间？",
+    opts: ["葡萄牙", "荷兰", "英国", "日本"],
+    ans: 2,
+    exp: "英国自18世纪末开始在马来亚建立影响力，通过一系列条约逐步控制各州，统治时间最长，直到1957年才给予独立。"
+  },
+  {
+    q: "槟城是在哪一年被英国占领成为殖民地的？",
+    opts: ["1786年", "1800年", "1824年", "1867年"],
+    ans: 0,
+    exp: "1786年，英国东印度公司的弗朗西斯·莱特（Francis Light）与吉打苏丹签约，占领槟城，使其成为英国在马来亚的第一块殖民地。"
+  },
+  {
+    q: "马六甲苏丹王朝的创建者是谁？",
+    opts: ["苏丹曼速沙", "拜里米苏拉", "苏丹阿拉乌丁", "汉都亚"],
+    ans: 1,
+    exp: "拜里米苏拉（Parameswara）是马六甲苏丹王朝的创建者，约在1400年建立马六甲，后来改信伊斯兰教，改名为苏丹依斯干达沙。"
+  },
+  {
+    q: "葡萄牙在哪一年攻占马六甲？",
+    opts: ["1403年", "1511年", "1641年", "1795年"],
+    ans: 1,
+    exp: "葡萄牙人在阿方索·达·阿尔布克尔克（Alfonso de Albuquerque）的率领下于1511年攻占马六甲，结束了马六甲苏丹王朝的统治。"
+  },
+  {
+    q: "荷兰人在哪一年从葡萄牙手中夺取马六甲？",
+    opts: ["1603年", "1641年", "1786年", "1811年"],
+    ans: 1,
+    exp: "荷兰人联合柔佛苏丹于1641年从葡萄牙手中夺取马六甲，荷兰随后统治马六甲超过150年。"
+  },
+  {
+    q: "《邦咯条约》于哪一年签署，使英国正式介入马来各州内政？",
+    opts: ["1824年", "1874年", "1888年", "1909年"],
+    ans: 1,
+    exp: "1874年《邦咯条约》（Perjanjian Pangkor）由英国与霹雳州签署，开创了英国在马来各州派驻参政司（Resident）的制度，正式介入各州内政。"
+  },
+  {
+    q: "以下哪位是马来民族英雄，曾领导反抗英国殖民统治？",
+    opts: ["汉都亚", "达托·班让", "马当", "陈祯禄"],
+    ans: 1,
+    exp: "达托·班让（Dato' Bahaman）是彭亨州的马来族领袖，于1891年领导反抗英国统治的武装斗争，是重要的马来民族英雄之一。"
+  },
+  {
+    q: "马来亚联合邦由多少个州组成？",
+    opts: ["9个州", "11个州", "13个州", "14个州"],
+    ans: 1,
+    exp: "1948年成立的马来亚联合邦由11个州组成，包括9个马来州属以及槟城和马六甲两个英国直辖殖民地。"
+  },
+  {
+    q: "新加坡于哪一年脱离马来西亚成为独立国家？",
+    opts: ["1963年", "1965年", "1968年", "1971年"],
+    ans: 1,
+    exp: "新加坡于1965年8月9日脱离马来西亚独立，主要原因是新加坡人民行动党与马来西亚中央政府之间在经济和种族政策上的分歧。"
+  },
+  {
+    q: "五一三事件发生于哪一年？",
+    opts: ["1963年", "1967年", "1969年", "1971年"],
+    ans: 2,
+    exp: "五一三事件（Peristiwa 13 Mei）发生于1969年5月13日，是第三届全国大选后爆发的严重种族冲突，促使马来西亚政府推行新经济政策。"
+  },
+  {
+    q: "国家原则（Rukun Negara）是在哪一年颁布的？",
+    opts: ["1963年", "1969年", "1970年", "1971年"],
+    ans: 2,
+    exp: "国家原则（Rukun Negara）于1970年8月31日（独立日）正式颁布，目的是在五一三事件后促进国民团结与和谐。"
+  },
+  {
+    q: "以下哪一项是国家原则（Rukun Negara）的第一条原则？",
+    opts: ["民主", "信奉上苍", "维护宪法", "法律至上"],
+    ans: 1,
+    exp: "国家原则的五大原则依次为：信奉上苍（Kepercayaan kepada Tuhan）、忠于君国、维护宪法、法律至上、良好行为与道德。"
+  },
+  {
+    q: "马来西亚最高元首的任期是多少年？",
+    opts: ["3年", "4年", "5年", "7年"],
+    ans: 2,
+    exp: "根据马来西亚宪法，最高元首（Yang di-Pertuan Agong）由九位马来统治者轮流担任，每届任期为五年。"
+  },
+  {
+    q: "以下哪个是马来西亚的国语？",
+    opts: ["英语", "华语", "马来语", "淡米尔语"],
+    ans: 2,
+    exp: "根据马来西亚联邦宪法第152条，马来语（Bahasa Malaysia/Bahasa Melayu）为马来西亚的国语和官方语言。"
+  },
+  {
+    q: "马来西亚国旗上的条纹共有多少条？",
+    opts: ["11条", "13条", "14条", "16条"],
+    ans: 2,
+    exp: "马来西亚国旗（Jalur Gemilang）由14条红白相间的横条纹组成，代表马来西亚的13个州和1个联邦政府。"
+  },
+  {
+    q: "马来西亚国徽盾形图案上方有哪个象征？",
+    opts: ["弯月与星", "老虎", "木槿花", "国会大厦"],
+    ans: 0,
+    exp: "马来西亚国徽（Jata Negara）盾形图案上方有一个黄色的弯月与十四角星，象征伊斯兰教是马来西亚的官方宗教。"
+  },
+  {
+    q: "马来西亚国花是什么？",
+    opts: ["莲花", "茉莉花", "木槿花", "兰花"],
+    ans: 2,
+    exp: "木槿花（Bunga Raya / Hibiscus）是马来西亚的国花，于1960年被正式定为国花，象征马来西亚人民的勇气与活力。"
+  },
+  {
+    q: "以下哪位是马来西亚独立前的末代英国最高专员？",
+    opts: ["史丹福·莱佛士", "威廉·麦克纳尔蒂", "杰拉尔德·坦普勒", "唐纳德·麦吉利夫雷"],
+    ans: 3,
+    exp: "唐纳德·麦吉利夫雷（Donald MacGillivray）是马来亚联合邦最后一任英国最高专员，任期至1957年马来亚独立为止。"
+  },
+  {
+    q: "马来亚共产党主要由哪个族群组成？",
+    opts: ["马来族", "印度裔", "华裔", "欧亚裔"],
+    ans: 2,
+    exp: "马来亚共产党（Parti Komunis Malaya）成员主要由华裔组成，于1930年成立，在二战后发动武装斗争，导致1948年紧急状态的宣布。"
+  },
+  {
+    q: "马来亚首次联邦议会选举于哪一年举行？",
+    opts: ["1955年", "1957年", "1959年", "1961年"],
+    ans: 2,
+    exp: "马来亚独立后，首次联邦议会（Parlimen）选举于1959年举行，联盟（Perikatan）赢得多数议席，东姑阿都拉曼出任首相。"
+  },
+  {
+    q: "以下哪个国际组织是马来西亚的创始成员国之一？",
+    opts: ["联合国", "东南亚国家联盟（东盟）", "英联邦", "不结盟运动"],
+    ans: 1,
+    exp: "马来西亚是1967年8月8日成立的东南亚国家联盟（ASEAN/东盟）的五个创始成员国之一，其余四国为泰国、印度尼西亚、菲律宾和新加坡。"
+  },
+  {
+    q: "马来西亚《联邦宪法》于哪一年生效？",
+    opts: ["1956年", "1957年", "1959年", "1963年"],
+    ans: 1,
+    exp: "马来西亚《联邦宪法》于1957年8月31日与马来亚独立同日生效，是国家的最高法律，由英国里德委员会起草。"
+  }
+];
+
+let userAnswers = new Array(questions.length).fill(null);
+let submitted = false;
+
+function buildQuiz() {
+  const container = document.getElementById('quizContainer');
+  container.innerHTML = '';
+  questions.forEach((q, i) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.id = 'qcard-' + i;
+
+    const qHeader = `<div class="q-header">
+      <div class="q-number">${i+1}</div>
+      <div class="q-text">${q.q}</div>
+    </div>`;
+
+    const opts = q.opts.map((opt, j) => {
+      const labels = ['A','B','C','D'];
+      return `<button class="option-btn" id="opt-${i}-${j}" onclick="selectAnswer(${i},${j})" disabled>
+        <span class="option-label">${labels[j]}</span>
+        <span>${opt}</span>
+      </button>`;
+    }).join('');
+
+    const expDiv = `<div class="explanation" id="exp-${i}">
+      <strong>✓ 解析：</strong>${q.exp}
+    </div>`;
+
+    card.innerHTML = qHeader + `<div class="options">${opts}</div>` + expDiv;
+    container.appendChild(card);
+  });
+
+  // Enable options
+  for (let i = 0; i < questions.length; i++) {
+    for (let j = 0; j < 4; j++) {
+      const btn = document.getElementById('opt-' + i + '-' + j);
+      if (btn) btn.disabled = false;
+    }
+  }
+}
+
+function selectAnswer(qi, oi) {
+  if (submitted) return;
+  userAnswers[qi] = oi;
+
+  for (let j = 0; j < 4; j++) {
+    const btn = document.getElementById('opt-' + qi + '-' + j);
+    btn.classList.remove('correct', 'wrong', 'reveal');
+    btn.style.borderColor = '';
+    btn.style.background = '';
+  }
+
+  const selected = document.getElementById('opt-' + qi + '-' + oi);
+  selected.style.borderColor = '#1a2744';
+  selected.style.background = '#eef0f8';
+
+  updateProgress();
+}
+
+function updateProgress() {
+  const answered = userAnswers.filter(a => a !== null).length;
+  const pct = (answered / questions.length) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = answered + ' / ' + questions.length + ' 已作答';
+}
+
+function submitQuiz() {
+  const unanswered = userAnswers.filter(a => a === null).length;
+  if (unanswered > 0) {
+    document.getElementById('unansweredNotice').style.display = 'block';
+    document.getElementById('unansweredNotice').textContent = '⚠ 还有 ' + unanswered + ' 道题目未作答，请完成后再提交。';
+    return;
+  }
+
+  submitted = true;
+  document.getElementById('unansweredNotice').style.display = 'none';
+  document.getElementById('submitBtn').disabled = true;
+
+  let correct = 0;
+  questions.forEach((q, i) => {
+    const userAns = userAnswers[i];
+    const rightAns = q.ans;
+    const isCorrect = userAns === rightAns;
+    if (isCorrect) correct++;
+
+    for (let j = 0; j < 4; j++) {
+      const btn = document.getElementById('opt-' + i + '-' + j);
+      btn.style.borderColor = '';
+      btn.style.background = '';
+      btn.disabled = true;
+      if (j === rightAns && isCorrect && j === userAns) {
+        btn.classList.add('correct');
+      } else if (j === userAns && !isCorrect) {
+        btn.classList.add('wrong');
+      } else if (j === rightAns && !isCorrect) {
+        btn.classList.add('reveal');
+      }
+    }
+
+    if (!isCorrect) {
+      document.getElementById('exp-' + i).classList.add('show');
+    }
+
+    document.getElementById('qcard-' + i).classList.add('answered');
+  });
+
+  const score = Math.round((correct / questions.length) * 100);
+  showResult(score, correct);
+  document.getElementById('resultPanel').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showResult(score, correct) {
+  document.getElementById('scoreNum').textContent = score;
+  document.getElementById('correctCount').textContent = correct;
+  document.getElementById('wrongCount').textContent = questions.length - correct;
+
+  let title, sub;
+  if (score >= 90) {
+    title = '🏆 非常出色！';
+    sub = '羽绚，你的历史知识非常扎实，继续保持！';
+  } else if (score >= 75) {
+    title = '🌟 做得很好！';
+    sub = '羽绚，成绩优异！再复习一下错题，一定能考满分！';
+  } else if (score >= 60) {
+    title = '👍 继续加油！';
+    sub = '羽绚，基础还不错，认真复习错题的解析，你会进步更快！';
+  } else {
+    title = '📖 加把劲！';
+    sub = '羽绚，不要气馁！仔细阅读每道题的解析，再来一次！';
+  }
+
+  document.getElementById('resultTitle').textContent = title;
+  document.getElementById('resultSub').textContent = sub;
+  document.getElementById('resultPanel').classList.add('show');
+}
+
+function resetQuiz() {
+  userAnswers = new Array(questions.length).fill(null);
+  submitted = false;
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('resultPanel').classList.remove('show');
+  document.getElementById('unansweredNotice').style.display = 'none';
+  buildQuiz();
+  updateProgress();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+buildQuiz();
+updateProgress();
+</script>
+</body>
+</html>
