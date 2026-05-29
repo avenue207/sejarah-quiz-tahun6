@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>郑羽绚 — 六年级历史模拟考试 第8套</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--gold:#d4a017;--gold-bg:#fdf6e3;--green:#1a7a4a;--green-bg:#eaf7ee;--green-b:#27ae60;--red:#c0392b;--red-bg:#fdf0ef;--red-b:#e74c3c;--ink:#2c2c2c;--muted:#666;--border:#ddd;--bg:#fafaf8;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+.hdr{background:var(--navy);color:#fff;padding:1.75rem 1rem 1.25rem;text-align:center;border-bottom:4px solid var(--gold)}
+.hdr-sub{font-size:12px;color:#aab4cc;letter-spacing:.06em;margin-bottom:5px}
+.hdr h1{font-family:'Noto Serif SC',serif;font-size:clamp(17px,4vw,26px);font-weight:700;letter-spacing:.06em}
+.hdr-meta{margin-top:8px;font-size:12px;color:#c0cadc}
+.set-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;margin-top:6px;letter-spacing:.05em}
+.pb-wrap{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:10px auto 0;max-width:360px}
+.pb{background:var(--gold);height:5px;border-radius:99px;transition:width .4s ease;width:0%}
+.pb-lbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
+.nav{background:var(--navy);border-bottom:2px solid rgba(255,255,255,.08);padding:.6rem 1rem;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.nav a{color:#aab4cc;font-size:12px;text-decoration:none;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.15);transition:all .15s}
+.nav a:hover,.nav a.active{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
+.ctr{max-width:760px;margin:0 auto;padding:1.25rem 1rem 4rem}
+.qc{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem;transition:box-shadow .2s}
+.qh{display:flex;align-items:flex-start;gap:10px;margin-bottom:.85rem}
+.qn{background:var(--navy);color:#fff;font-size:11px;font-weight:700;border-radius:99px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qt{font-size:14px;line-height:1.65;font-weight:500;padding-top:3px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.ob{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--border);border-radius:7px;padding:.65rem .9rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
+.ob:hover:not(:disabled){border-color:var(--navy);background:#eef0f8}
+.ol{background:var(--navy);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ob.correct{border-color:var(--green-b);background:var(--green-bg)}.ob.correct .ol{background:var(--green)}
+.ob.wrong{border-color:var(--red-b);background:var(--red-bg)}.ob.wrong .ol{background:var(--red)}
+.ob.reveal{border-color:var(--green-b);background:var(--green-bg);opacity:.75}.ob.reveal .ol{background:var(--green)}
+.exp{display:none;margin-top:.85rem;background:var(--gold-bg);border-left:4px solid var(--gold);border-radius:0 7px 7px 0;padding:.65rem .9rem;font-size:13px;line-height:1.65;color:#5a4a1a}
+.exp.show{display:block}.exp strong{color:var(--navy)}
+.sub-sec{text-align:center;margin:1.75rem 0}
+#subBtn{background:var(--navy);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.8rem 2.75rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
+#subBtn:hover{background:#253560}#subBtn:active{transform:scale(.97)}#subBtn:disabled{background:#aaa;cursor:not-allowed}
+.warn{display:none;color:var(--red);font-size:12.5px;margin-top:.4rem}
+.rp{display:none;background:var(--white);border:2px solid var(--navy);border-radius:14px;padding:2rem 1.5rem;text-align:center;margin:1.75rem 0}
+.rp.show{display:block}
+.sc{width:110px;height:110px;border-radius:50%;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;border:4px solid var(--gold)}
+.sn{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:700;line-height:1}
+.sl{font-size:11px;color:#aab4cc;margin-top:2px}
+.rt{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.rs{font-size:13px;color:var(--muted);margin-bottom:1.25rem}
+.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.25rem}
+.stat{text-align:center}.stn{font-size:26px;font-weight:700;font-family:'Noto Serif SC',serif}
+.stn.c{color:var(--green)}.stn.w{color:var(--red)}.stl{font-size:11px;color:var(--muted)}
+#retBtn{background:transparent;color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:500;padding:.55rem 1.75rem;border:2px solid var(--navy);border-radius:99px;cursor:pointer;transition:background .2s;margin-right:8px}
+#retBtn:hover{background:#eef0f8}
+.nav-next{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:700;padding:.55rem 1.75rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
+@media(max-width:480px){.qt{font-size:13.5px}.ob{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-sub">马来西亚国家小学课程标准 · KSSR · 六年级历史</div>
+  <h1>模拟考试 — 为郑羽绚精心编制</h1>
+  <div class="set-badge">第 8 套 / 共 10 套</div>
+  <div class="hdr-meta">32 题 · 满分 100 分</div>
+  <div class="pb-wrap"><div class="pb" id="pb"></div></div>
+  <div class="pb-lbl" id="pbl">0 / 32 已作答</div>
+</div>
+<div class="nav">
+  <a href="set1.html" class="">第1套</a><a href="set2.html" class="">第2套</a><a href="set3.html" class="">第3套</a><a href="set4.html" class="">第4套</a><a href="set5.html" class="">第5套</a><a href="set6.html" class="">第6套</a><a href="set7.html" class="">第7套</a><a href="set8.html" class="active">第8套</a><a href="set9.html" class="">第9套</a><a href="set10.html" class="">第10套</a>
+</div>
+<div class="ctr" id="qctr"></div>
+<div class="ctr">
+  <div class="sub-sec">
+    <button id="subBtn" onclick="submit()">提交答案 · 查看成绩</button>
+    <div class="warn" id="wn"></div>
+  </div>
+  <div class="rp" id="rp">
+    <div class="sc"><span class="sn" id="scn">0</span><span class="sl">/ 100</span></div>
+    <div class="rt" id="rtitle"></div>
+    <div class="rs" id="rsub"></div>
+    <div class="rstats">
+      <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
+      <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
+    </div>
+    <button id="retBtn" onclick="reset()">重新作答</button>
+    <a class="nav-next" href="set9.html">下一套 →</a>
+  </div>
+</div>
+<script>
+const Q=[{"q": "沙巴最大的土著族群是什么？", "opts": ["伊班族", "卡达山-杜顺族", "巴瑶族", "布吉族"], "ans": 1, "exp": "卡达山-杜顺族（Kadazan-Dusun）是沙巴最大的土著族群，京那巴鲁山对他们具有重要的文化和宗教意义。"}, {"q": "马来西亚最著名的传统布艺是什么？", "opts": ["吉隆坡刺绣", "马来蜡染（Batik）", "峇迪", "以上皆是"], "ans": 3, "exp": "马来西亚传统布艺包括蜡染（Batik）、宋谷帽编织等，其中蜡染是马来西亚和印度尼西亚共同的文化遗产。"}, {"q": "以下哪个是马来西亚传统木偶戏？", "opts": ["影戏（Wayang Kulit）", "独脚戏", "变脸", "手影戏"], "ans": 0, "exp": "影戏（Wayang Kulit，皮影戏）是马来西亚（尤其是吉兰丹和吉打）的传统表演艺术，用皮革雕刻的木偶投影表演。"}, {"q": "以下哪个是马来西亚传统陀螺游戏？", "opts": ["Gasing", "Wau", "Congkak", "Sepak Takraw"], "ans": 0, "exp": "Gasing（陀螺）是马来西亚传统民间游戏，尤其在马来人社区流行，陀螺可重达几公斤。"}, {"q": "以下哪个是马来西亚的传统风筝？", "opts": ["Wau", "Layang-layang", "Kite", "Gasing"], "ans": 0, "exp": "Wau（马来风筝）是马来西亚传统风筝，形状独特，以月形最为著名（Wau Bulan），是吉兰丹的文化象征。"}, {"q": "以下哪个是马来西亚的传统棋盘游戏？", "opts": ["象棋", "围棋", "Congkak", "跳棋"], "ans": 2, "exp": "Congkak（子母棋）是马来西亚传统棋盘游戏，使用木制板和种子或石子，考验策略和数学能力。"}, {"q": "马来西亚传统音乐中，以下哪个乐器最具代表性？", "opts": ["Gamelan（甘美兰）", "二胡", "塔布拉鼓", "竖琴"], "ans": 0, "exp": "甘美兰（Gamelan）是马来传统打击乐器组合，源自爪哇，在马来半岛（尤其是彭亨和丁加奴）广为流传。"}, {"q": "以下哪个节日在砂拉越和沙巴最为重要？", "opts": ["开斋节", "华人新年", "Gawai（收割节）", "中秋节"], "ans": 2, "exp": "Gawai（收割节）是砂拉越达雅族（尤其是伊班族）最重要的节日，于每年6月1日庆祝，感谢丰收。"}, {"q": "以下哪个是卡达山族最重要的节日？", "opts": ["Gawai", "Kaamatan（丰收节）", "开斋节", "华人新年"], "ans": 1, "exp": "Kaamatan（丰收节）是沙巴卡达山-杜顺族最重要的节日，于每年5月庆祝，感谢稻米丰收。"}, {"q": "以下哪个马来西亚传统食品是各族共同喜爱的？", "opts": ["椰浆饭（Nasi Lemak）", "咖喱", "肉骨茶", "叻沙"], "ans": 0, "exp": "椰浆饭（Nasi Lemak）是马来西亚的国民美食，以椰浆米饭配江鱼子、花生、黄瓜、煮鸡蛋和参巴辣椒为标志。"}, {"q": "以下哪个是马来西亚独有的融合文化饮食？", "opts": ["马来饮食", "娘惹（Peranakan）饮食", "印度饮食", "华裔饮食"], "ans": 1, "exp": "娘惹（Peranakan/Baba-Nyonya）饮食是融合马来与华人烹饪风格的独特菜肴，在马六甲和槟城最为著名。"}, {"q": "以下哪个城市以娘惹文化著称？", "opts": ["吉隆坡", "马六甲", "新山", "亚庇"], "ans": 1, "exp": "马六甲是娘惹（Peranakan）文化的重要中心，保留了丰富的峇峇娘惹建筑、服饰和饮食文化遗产。"}, {"q": "马来西亚「团结口号」的马来语是什么？", "opts": ["Bersatu Teguh", "Satu Malaysia", "Maju Bersama", "Malaysia Berjaya"], "ans": 0, "exp": "马来西亚的传统团结口号是「Bersatu Teguh」（团结就是力量），体现多元一体的国家精神。"}, {"q": "以下哪个是马来西亚的传统手工艺？", "opts": ["籐编工艺", "漆器", "玻璃吹制", "陶瓷"], "ans": 0, "exp": "籐编工艺（Kraft Rotan）是马来西亚重要的传统手工艺，砂拉越和半岛各地都有制作籐制家具和器皿的传统。"}, {"q": "马来西亚每年在哪个月庆祝国庆日？", "opts": ["7月", "8月", "9月", "10月"], "ans": 1, "exp": "马来西亚国庆日（Hari Merdeka）在每年8月31日庆祝，纪念1957年马来亚独立。"}, {"q": "以下哪个是马来西亚学校教育中的道德教育科目？", "opts": ["Sejarah", "Pendidikan Moral", "Agama Islam", "Sivik"], "ans": 1, "exp": "道德教育（Pendidikan Moral）是非穆斯林学生的必修科目，培养良好品德和公民意识；穆斯林学生则修读伊斯兰教育。"}, {"q": "以下哪个年份马来西亚推行「国家团结教育政策」？", "opts": ["1957年", "1967年", "1971年", "1981年"], "ans": 2, "exp": "1971年推行的教育政策以马来语为主要教学媒介语，目标之一是通过共同语言加强各族团结。"}, {"q": "以下哪个是马来西亚「1Malaysia」概念的核心主题？", "opts": ["经济增长", "民族团结", "科技发展", "绿色环保"], "ans": 1, "exp": "「1Malaysia」概念由第六任首相纳吉提出，核心是促进各族马来西亚人的团结、接纳与包容。"}, {"q": "以下哪个是马来西亚「转型计划」（GTP）的目标？", "opts": ["增加石油收入", "减少犯罪率与腐败", "扩大军备", "发展旅游业"], "ans": 1, "exp": "政府转型计划（GTP）的六大全国关键成果领域包括减少犯罪、打击腐败、改善教育、提高生活水平等。"}, {"q": "马来西亚最重要的教育改革文件是哪个？", "opts": ["1956年拉萨报告书", "1960年拉曼达立报告书", "1971年教育法令", "2013年马来西亚教育大蓝图"], "ans": 3, "exp": "2013年马来西亚教育大蓝图（Malaysia Education Blueprint 2013–2025）是最新的重要教育改革文件，规划未来教育发展方向。"}, {"q": "以下哪个是马来西亚「宏愿学校」（Sekolah Wawasan）的目的？", "opts": ["推广英语", "促进各源流学校学生互动", "分离各族学生", "提高考试成绩"], "ans": 1, "exp": "宏愿学校概念旨在将不同源流学校（国小、华小、淡小）设在同一校园，共用设施以促进各族学生互动。"}, {"q": "以下哪个组织负责监督马来西亚的人权状况？", "opts": ["人权委员会（SUHAKAM）", "警察总署", "司法部", "教育部"], "ans": 0, "exp": "马来西亚人权委员会（SUHAKAM，Suruhanjaya Hak Asasi Manusia Malaysia）于1999年成立，负责监督和促进人权。"}, {"q": "以下哪个是马来西亚成立时新加坡加入的主要条件？", "opts": ["获得自治权", "经济整合", "取消关税", "共同防卫"], "ans": 0, "exp": "新加坡加入马来西亚时，争取在内政（尤其是教育和劳工）方面获得较大自治权，但最终因政策分歧而于1965年独立。"}, {"q": "以下哪个是马来西亚现任政府体制的特点？", "opts": ["总统制", "联邦制", "单一制", "邦联制"], "ans": 1, "exp": "马来西亚是联邦制国家（Federal State），权力在联邦政府和州政府之间按宪法划分。"}, {"q": "以下哪个是马来西亚联邦与州政府权力划分的依据？", "opts": ["国家原则", "联邦宪法附表", "内阁决议", "议会法案"], "ans": 1, "exp": "联邦宪法附表（Federal List、State List、Concurrent List）规定了联邦与州政府各自的立法权限范围。"}, {"q": "以下哪个是马来西亚最重要的跨族群节日？", "opts": ["开放日（Hari Raya Open House）", "独立日", "马来西亚日", "以上皆是"], "ans": 3, "exp": "开放日、独立日和马来西亚日都是马来西亚重要的全国性庆典，促进各族互访交流，加强团结。"}, {"q": "以下哪个是马来西亚政府为促进国家团结推出的计划？", "opts": ["国家团结局计划", "全国团结周", "1Malaysia概念", "以上皆是"], "ans": 3, "exp": "马来西亚政府推出多项促进国家团结的计划，包括国家团结局（Jabatan Perpaduan Negara）的活动、全国团结周和1Malaysia概念等。"}, {"q": "以下哪个是马来西亚民族关系的核心原则？", "opts": ["种族优越", "文化同化", "相互尊重与容忍", "经济竞争"], "ans": 2, "exp": "相互尊重与容忍（Saling Menghormati dan Bertolak Ansur）是马来西亚民族关系的核心原则，各族在相互尊重中共存。"}, {"q": "马来西亚学校课程中，以下哪个科目最能培养爱国情操？", "opts": ["数学", "科学", "历史（Sejarah）", "英语"], "ans": 2, "exp": "历史科（Sejarah）是马来西亚学校课程的重要科目，通过了解国家历史培养学生的爱国情操和国家认同感。"}, {"q": "以下哪个是KSSR课程的全称？", "opts": ["国家小学标准课程", "国家教育革新计划", "标准课程与评估", "初级小学课程"], "ans": 0, "exp": "KSSR（Kurikulum Standard Sekolah Rendah）的全称是「国家小学标准课程」，于2011年推行，取代旧有的KBSR课程。"}, {"q": "马来西亚历史上哪个首相提出「看东方政策」？", "opts": ["东姑阿都拉曼", "敦拉萨", "敦胡先翁", "敦马哈迪"], "ans": 3, "exp": "敦马哈迪于1981年执政后提出「看东方政策」，鼓励马来西亚向日本和韩国学习，推动工业化发展。"}, {"q": "以下哪个是马来西亚最重要的全国性文化表演盛事？", "opts": ["槟城乔治城艺术节", "马来西亚文化节", "全国文化宫表演", "砂拉越文化村节庆"], "ans": 1, "exp": "马来西亚文化节（Pesta Kebudayaan Malaysia）是展示全国各州各族文化表演和传统手工艺的重要年度盛事。"}];
+let A=new Array(Q.length).fill(null),done=false;
+function build(){
+  const c=document.getElementById('qctr');c.innerHTML='';
+  Q.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='qc';d.id='qc'+i;
+    const labs=['A','B','C','D'];
+    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${q.q}</div></div>
+    <div class="opts">${q.opts.map((o,j)=>`<button class="ob" id="o${i}_${j}" onclick="pick(${i},${j})"><span class="ol">${labs[j]}</span><span>${o}</span></button>`).join('')}</div>
+    <div class="exp" id="ex${i}"><strong>✓ 解析：</strong>${q.exp}</div>`;
+    c.appendChild(d);
+  });
+}
+function pick(qi,oi){
+  if(done)return;A[qi]=oi;
+  for(let j=0;j<4;j++){const b=document.getElementById('o'+qi+'_'+j);b.style.borderColor='';b.style.background='';}
+  const s=document.getElementById('o'+qi+'_'+oi);s.style.borderColor='#1a2744';s.style.background='#eef0f8';
+  upd();
+}
+function upd(){
+  const n=A.filter(a=>a!==null).length;
+  document.getElementById('pb').style.width=(n/Q.length*100)+'%';
+  document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
+}
+function submit(){
+  const un=A.filter(a=>a===null).length;
+  if(un>0){const w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
+  done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
+  let ok=0;
+  Q.forEach((q,i)=>{
+    const ua=A[i],ra=q.ans,good=ua===ra;if(good)ok++;
+    for(let j=0;j<4;j++){const b=document.getElementById('o'+i+'_'+j);b.style.borderColor='';b.style.background='';b.disabled=true;
+      if(j===ra&&good&&j===ua)b.classList.add('correct');
+      else if(j===ua&&!good)b.classList.add('wrong');
+      else if(j===ra&&!good)b.classList.add('reveal');
+    }
+    if(!good)document.getElementById('ex'+i).classList.add('show');
+  });
+  const sc=Math.round(ok/Q.length*100);
+  document.getElementById('scn').textContent=sc;
+  document.getElementById('cc').textContent=ok;
+  document.getElementById('wc').textContent=Q.length-ok;
+  let t,s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！';}
+  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题，下次更好！';}
+  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错，仔细看解析，进步会更快！';}
+  else{t='📖 再加把劲！';s='羽绚，不要气馁！读懂解析，再来一次必定进步！';}
+  document.getElementById('rtitle').textContent=t;
+  document.getElementById('rsub').textContent=s;
+  document.getElementById('rp').classList.add('show');
+  document.getElementById('rp').scrollIntoView({behavior:'smooth'});
+}
+function reset(){A=new Array(Q.length).fill(null);done=false;document.getElementById('subBtn').disabled=false;document.getElementById('rp').classList.remove('show');build();upd();window.scrollTo({top:0,behavior:'smooth'});}
+build();upd();
+</script>
+</body>
+</html>
