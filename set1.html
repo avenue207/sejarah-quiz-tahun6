@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>郑羽绚 — 六年级历史模拟考试 第1套</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--gold:#d4a017;--gold-bg:#fdf6e3;--green:#1a7a4a;--green-bg:#eaf7ee;--green-b:#27ae60;--red:#c0392b;--red-bg:#fdf0ef;--red-b:#e74c3c;--ink:#2c2c2c;--muted:#666;--border:#ddd;--bg:#fafaf8;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+.hdr{background:var(--navy);color:#fff;padding:1.75rem 1rem 1.25rem;text-align:center;border-bottom:4px solid var(--gold)}
+.hdr-sub{font-size:12px;color:#aab4cc;letter-spacing:.06em;margin-bottom:5px}
+.hdr h1{font-family:'Noto Serif SC',serif;font-size:clamp(17px,4vw,26px);font-weight:700;letter-spacing:.06em}
+.hdr-meta{margin-top:8px;font-size:12px;color:#c0cadc}
+.set-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;margin-top:6px;letter-spacing:.05em}
+.pb-wrap{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:10px auto 0;max-width:360px}
+.pb{background:var(--gold);height:5px;border-radius:99px;transition:width .4s ease;width:0%}
+.pb-lbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
+.nav{background:var(--navy);border-bottom:2px solid rgba(255,255,255,.08);padding:.6rem 1rem;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.nav a{color:#aab4cc;font-size:12px;text-decoration:none;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.15);transition:all .15s}
+.nav a:hover,.nav a.active{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
+.ctr{max-width:760px;margin:0 auto;padding:1.25rem 1rem 4rem}
+.qc{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem;transition:box-shadow .2s}
+.qh{display:flex;align-items:flex-start;gap:10px;margin-bottom:.85rem}
+.qn{background:var(--navy);color:#fff;font-size:11px;font-weight:700;border-radius:99px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qt{font-size:14px;line-height:1.65;font-weight:500;padding-top:3px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.ob{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--border);border-radius:7px;padding:.65rem .9rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
+.ob:hover:not(:disabled){border-color:var(--navy);background:#eef0f8}
+.ol{background:var(--navy);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ob.correct{border-color:var(--green-b);background:var(--green-bg)}.ob.correct .ol{background:var(--green)}
+.ob.wrong{border-color:var(--red-b);background:var(--red-bg)}.ob.wrong .ol{background:var(--red)}
+.ob.reveal{border-color:var(--green-b);background:var(--green-bg);opacity:.75}.ob.reveal .ol{background:var(--green)}
+.exp{display:none;margin-top:.85rem;background:var(--gold-bg);border-left:4px solid var(--gold);border-radius:0 7px 7px 0;padding:.65rem .9rem;font-size:13px;line-height:1.65;color:#5a4a1a}
+.exp.show{display:block}.exp strong{color:var(--navy)}
+.sub-sec{text-align:center;margin:1.75rem 0}
+#subBtn{background:var(--navy);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.8rem 2.75rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
+#subBtn:hover{background:#253560}#subBtn:active{transform:scale(.97)}#subBtn:disabled{background:#aaa;cursor:not-allowed}
+.warn{display:none;color:var(--red);font-size:12.5px;margin-top:.4rem}
+.rp{display:none;background:var(--white);border:2px solid var(--navy);border-radius:14px;padding:2rem 1.5rem;text-align:center;margin:1.75rem 0}
+.rp.show{display:block}
+.sc{width:110px;height:110px;border-radius:50%;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;border:4px solid var(--gold)}
+.sn{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:700;line-height:1}
+.sl{font-size:11px;color:#aab4cc;margin-top:2px}
+.rt{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.rs{font-size:13px;color:var(--muted);margin-bottom:1.25rem}
+.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.25rem}
+.stat{text-align:center}.stn{font-size:26px;font-weight:700;font-family:'Noto Serif SC',serif}
+.stn.c{color:var(--green)}.stn.w{color:var(--red)}.stl{font-size:11px;color:var(--muted)}
+#retBtn{background:transparent;color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:500;padding:.55rem 1.75rem;border:2px solid var(--navy);border-radius:99px;cursor:pointer;transition:background .2s;margin-right:8px}
+#retBtn:hover{background:#eef0f8}
+.nav-next{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:700;padding:.55rem 1.75rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
+@media(max-width:480px){.qt{font-size:13.5px}.ob{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-sub">马来西亚国家小学课程标准 · KSSR · 六年级历史</div>
+  <h1>模拟考试 — 为郑羽绚精心编制</h1>
+  <div class="set-badge">第 1 套 / 共 10 套</div>
+  <div class="hdr-meta">32 题 · 满分 100 分</div>
+  <div class="pb-wrap"><div class="pb" id="pb"></div></div>
+  <div class="pb-lbl" id="pbl">0 / 32 已作答</div>
+</div>
+<div class="nav">
+  <a href="set1.html" class="active">第1套</a><a href="set2.html" class="">第2套</a><a href="set3.html" class="">第3套</a><a href="set4.html" class="">第4套</a><a href="set5.html" class="">第5套</a><a href="set6.html" class="">第6套</a><a href="set7.html" class="">第7套</a><a href="set8.html" class="">第8套</a><a href="set9.html" class="">第9套</a><a href="set10.html" class="">第10套</a>
+</div>
+<div class="ctr" id="qctr"></div>
+<div class="ctr">
+  <div class="sub-sec">
+    <button id="subBtn" onclick="submit()">提交答案 · 查看成绩</button>
+    <div class="warn" id="wn"></div>
+  </div>
+  <div class="rp" id="rp">
+    <div class="sc"><span class="sn" id="scn">0</span><span class="sl">/ 100</span></div>
+    <div class="rt" id="rtitle"></div>
+    <div class="rs" id="rsub"></div>
+    <div class="rstats">
+      <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
+      <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
+    </div>
+    <button id="retBtn" onclick="reset()">重新作答</button>
+    <a class="nav-next" href="set2.html">下一套 →</a>
+  </div>
+</div>
+<script>
+const Q=[{"q": "马来亚独立的日期是哪一天？", "opts": ["1963年9月16日", "1957年8月31日", "1948年2月1日", "1955年7月27日"], "ans": 1, "exp": "马来亚于1957年8月31日正式从英国殖民统治下独立。这一天被定为国家独立日（Hari Merdeka）。"}, {"q": "马来西亚联邦成立于哪一年？", "opts": ["1957年", "1959年", "1963年", "1965年"], "ans": 2, "exp": "马来西亚联邦于1963年9月16日正式成立，由马来亚联合邦、新加坡、沙巴和砂拉越合并组成。"}, {"q": "马来亚的国父是谁？", "opts": ["东姑阿都拉曼", "敦拉萨", "敦胡先翁", "敦马哈迪"], "ans": 0, "exp": "东姑阿都拉曼（Tunku Abdul Rahman）被誉为马来亚国父，领导马来亚于1957年独立。"}, {"q": "以下哪个州属于东马来西亚？", "opts": ["雪兰莪", "柔佛", "砂拉越", "吉打"], "ans": 2, "exp": "砂拉越位于婆罗洲岛，属于东马来西亚。东马由砂拉越和沙巴两州组成。"}, {"q": "马来亚联合邦协议于哪一年签署？", "opts": ["1946年", "1948年", "1952年", "1957年"], "ans": 1, "exp": "马来亚联合邦协议于1948年2月1日签署生效，恢复了马来统治者的主权。"}, {"q": "日本占领马来亚的时期是哪段时间？", "opts": ["1939年至1942年", "1941年至1945年", "1943年至1946年", "1940年至1944年"], "ans": 1, "exp": "日本于1941年12月8日入侵马来半岛，直至1945年8月日本投降，占领约三年半。"}, {"q": "马来亚紧急状态宣布于哪一年？", "opts": ["1945年", "1946年", "1948年", "1950年"], "ans": 2, "exp": "马来亚紧急状态于1948年6月宣布，原因是马来亚共产党发动武装斗争，持续至1960年。"}, {"q": "1955年马来亚大选中，哪个联盟赢得压倒性胜利？", "opts": ["人民党", "联盟（Perikatan）", "民主行动党", "伊斯兰党"], "ans": 1, "exp": "由巫统、马华公会和印度国大党组成的联盟赢得52席中的51席。"}, {"q": "马六甲苏丹王朝的创建者是谁？", "opts": ["苏丹曼速沙", "拜里米苏拉", "苏丹阿拉乌丁", "汉都亚"], "ans": 1, "exp": "拜里米苏拉约在1400年建立马六甲，后改信伊斯兰教，改名苏丹依斯干达沙。"}, {"q": "葡萄牙在哪一年攻占马六甲？", "opts": ["1403年", "1511年", "1641年", "1795年"], "ans": 1, "exp": "葡萄牙人在阿方索·达·阿尔布克尔克率领下于1511年攻占马六甲，结束苏丹王朝统治。"}, {"q": "荷兰人在哪一年从葡萄牙手中夺取马六甲？", "opts": ["1603年", "1641年", "1786年", "1811年"], "ans": 1, "exp": "荷兰人联合柔佛苏丹于1641年从葡萄牙手中夺取马六甲，统治超过150年。"}, {"q": "槟城是在哪一年被英国占领的？", "opts": ["1786年", "1800年", "1824年", "1867年"], "ans": 0, "exp": "1786年，弗朗西斯·莱特与吉打苏丹签约，占领槟城，为英国在马来亚第一块殖民地。"}, {"q": "《邦咯条约》于哪一年签署？", "opts": ["1824年", "1874年", "1888年", "1909年"], "ans": 1, "exp": "1874年《邦咯条约》由英国与霹雳州签署，开创英国派驻参政司介入各州内政的制度。"}, {"q": "新加坡于哪一年脱离马来西亚？", "opts": ["1963年", "1965年", "1968年", "1971年"], "ans": 1, "exp": "新加坡于1965年8月9日脱离马来西亚独立，主因是政策分歧。"}, {"q": "五一三事件发生于哪一年？", "opts": ["1963年", "1967年", "1969年", "1971年"], "ans": 2, "exp": "五一三事件发生于1969年5月13日，是第三届大选后爆发的严重种族冲突。"}, {"q": "国家原则（Rukun Negara）是在哪一年颁布的？", "opts": ["1963年", "1969年", "1970年", "1971年"], "ans": 2, "exp": "国家原则于1970年8月31日正式颁布，目的是在五一三事件后促进国民团结。"}, {"q": "国家原则的第一条是什么？", "opts": ["民主", "信奉上苍", "维护宪法", "法律至上"], "ans": 1, "exp": "国家原则五大原则：信奉上苍、忠于君国、维护宪法、法律至上、良好行为与道德。"}, {"q": "马来西亚最高元首任期是多少年？", "opts": ["3年", "4年", "5年", "7年"], "ans": 2, "exp": "根据宪法，最高元首由九位马来统治者轮流担任，每届任期五年。"}, {"q": "马来西亚国旗上有多少条条纹？", "opts": ["11条", "13条", "14条", "16条"], "ans": 2, "exp": "马来西亚国旗由14条红白相间横条纹组成，代表13个州和1个联邦政府。"}, {"q": "马来西亚国花是什么？", "opts": ["莲花", "茉莉花", "木槿花", "兰花"], "ans": 2, "exp": "木槿花（Bunga Raya）于1960年被正式定为马来西亚国花。"}, {"q": "马来西亚的国语是什么？", "opts": ["英语", "华语", "马来语", "淡米尔语"], "ans": 2, "exp": "根据联邦宪法第152条，马来语为马来西亚的国语和官方语言。"}, {"q": "马来西亚《联邦宪法》于哪一年生效？", "opts": ["1956年", "1957年", "1959年", "1963年"], "ans": 1, "exp": "联邦宪法于1957年8月31日与马来亚独立同日生效，是国家的最高法律。"}, {"q": "马来亚共产党主要由哪个族群组成？", "opts": ["马来族", "印度裔", "华裔", "欧亚裔"], "ans": 2, "exp": "马来亚共产党成员主要由华裔组成，于1930年成立，在二战后发动武装斗争。"}, {"q": "马来亚首次联邦议会选举于哪一年举行？", "opts": ["1955年", "1957年", "1959年", "1961年"], "ans": 2, "exp": "马来亚独立后首次联邦议会选举于1959年举行，联盟赢得多数议席。"}, {"q": "东盟（ASEAN）成立于哪一年？", "opts": ["1961年", "1963年", "1967年", "1971年"], "ans": 2, "exp": "东南亚国家联盟于1967年8月8日成立，马来西亚是五个创始成员国之一。"}, {"q": "马来西亚国徽盾形上方有哪个象征？", "opts": ["弯月与星", "老虎", "木槿花", "国会大厦"], "ans": 0, "exp": "国徽盾形上方有黄色弯月与十四角星，象征伊斯兰教是马来西亚官方宗教。"}, {"q": "第二次世界大战中，日本于哪一年入侵马来半岛？", "opts": ["1939年", "1940年", "1941年", "1942年"], "ans": 2, "exp": "日本于1941年12月8日凌晨入侵马来半岛，比珍珠港事件还早数小时。"}, {"q": "马来亚联盟（Malayan Union）成立于哪一年？", "opts": ["1945年", "1946年", "1948年", "1950年"], "ans": 1, "exp": "马来亚联盟于1946年4月1日成立，但因马来人强烈反对而于1948年解散，被联合邦取代。"}, {"q": "以下哪位曾领导马来人反对马来亚联盟？", "opts": ["东姑阿都拉曼", "拿督翁惹化", "敦拉萨", "陈祯禄"], "ans": 1, "exp": "拿督翁惹化（Dato' Onn Jaafar）创立巫统，领导马来人反对马来亚联盟，成功迫使英国撤销联盟计划。"}, {"q": "巫统（UMNO）成立于哪一年？", "opts": ["1945年", "1946年", "1948年", "1952年"], "ans": 1, "exp": "巫统（马来民族统一机构）于1946年5月11日成立，由拿督翁惹化创立，以反对马来亚联盟。"}, {"q": "马华公会（MCA）成立于哪一年？", "opts": ["1946年", "1948年", "1949年", "1952年"], "ans": 2, "exp": "马华公会（马来西亚华人公会）于1949年2月27日成立，代表华裔社群利益。"}, {"q": "以下哪个是马来西亚的官方宗教？", "opts": ["基督教", "印度教", "伊斯兰教", "佛教"], "ans": 2, "exp": "根据联邦宪法第3条，伊斯兰教是马来西亚的官方宗教，但其他宗教可在和平与和谐中奉行。"}];
+let A=new Array(Q.length).fill(null),done=false;
+function build(){
+  const c=document.getElementById('qctr');c.innerHTML='';
+  Q.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='qc';d.id='qc'+i;
+    const labs=['A','B','C','D'];
+    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${q.q}</div></div>
+    <div class="opts">${q.opts.map((o,j)=>`<button class="ob" id="o${i}_${j}" onclick="pick(${i},${j})"><span class="ol">${labs[j]}</span><span>${o}</span></button>`).join('')}</div>
+    <div class="exp" id="ex${i}"><strong>✓ 解析：</strong>${q.exp}</div>`;
+    c.appendChild(d);
+  });
+}
+function pick(qi,oi){
+  if(done)return;A[qi]=oi;
+  for(let j=0;j<4;j++){const b=document.getElementById('o'+qi+'_'+j);b.style.borderColor='';b.style.background='';}
+  const s=document.getElementById('o'+qi+'_'+oi);s.style.borderColor='#1a2744';s.style.background='#eef0f8';
+  upd();
+}
+function upd(){
+  const n=A.filter(a=>a!==null).length;
+  document.getElementById('pb').style.width=(n/Q.length*100)+'%';
+  document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
+}
+function submit(){
+  const un=A.filter(a=>a===null).length;
+  if(un>0){const w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
+  done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
+  let ok=0;
+  Q.forEach((q,i)=>{
+    const ua=A[i],ra=q.ans,good=ua===ra;if(good)ok++;
+    for(let j=0;j<4;j++){const b=document.getElementById('o'+i+'_'+j);b.style.borderColor='';b.style.background='';b.disabled=true;
+      if(j===ra&&good&&j===ua)b.classList.add('correct');
+      else if(j===ua&&!good)b.classList.add('wrong');
+      else if(j===ra&&!good)b.classList.add('reveal');
+    }
+    if(!good)document.getElementById('ex'+i).classList.add('show');
+  });
+  const sc=Math.round(ok/Q.length*100);
+  document.getElementById('scn').textContent=sc;
+  document.getElementById('cc').textContent=ok;
+  document.getElementById('wc').textContent=Q.length-ok;
+  let t,s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！';}
+  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题，下次更好！';}
+  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错，仔细看解析，进步会更快！';}
+  else{t='📖 再加把劲！';s='羽绚，不要气馁！读懂解析，再来一次必定进步！';}
+  document.getElementById('rtitle').textContent=t;
+  document.getElementById('rsub').textContent=s;
+  document.getElementById('rp').classList.add('show');
+  document.getElementById('rp').scrollIntoView({behavior:'smooth'});
+}
+function reset(){A=new Array(Q.length).fill(null);done=false;document.getElementById('subBtn').disabled=false;document.getElementById('rp').classList.remove('show');build();upd();window.scrollTo({top:0,behavior:'smooth'});}
+build();upd();
+</script>
+</body>
+</html>
