@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>郑羽绚 — 六年级历史模拟考试 第6套</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--gold:#d4a017;--gold-bg:#fdf6e3;--green:#1a7a4a;--green-bg:#eaf7ee;--green-b:#27ae60;--red:#c0392b;--red-bg:#fdf0ef;--red-b:#e74c3c;--ink:#2c2c2c;--muted:#666;--border:#ddd;--bg:#fafaf8;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+.hdr{background:var(--navy);color:#fff;padding:1.75rem 1rem 1.25rem;text-align:center;border-bottom:4px solid var(--gold)}
+.hdr-sub{font-size:12px;color:#aab4cc;letter-spacing:.06em;margin-bottom:5px}
+.hdr h1{font-family:'Noto Serif SC',serif;font-size:clamp(17px,4vw,26px);font-weight:700;letter-spacing:.06em}
+.hdr-meta{margin-top:8px;font-size:12px;color:#c0cadc}
+.set-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;margin-top:6px;letter-spacing:.05em}
+.pb-wrap{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:10px auto 0;max-width:360px}
+.pb{background:var(--gold);height:5px;border-radius:99px;transition:width .4s ease;width:0%}
+.pb-lbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
+.nav{background:var(--navy);border-bottom:2px solid rgba(255,255,255,.08);padding:.6rem 1rem;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.nav a{color:#aab4cc;font-size:12px;text-decoration:none;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.15);transition:all .15s}
+.nav a:hover,.nav a.active{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
+.ctr{max-width:760px;margin:0 auto;padding:1.25rem 1rem 4rem}
+.qc{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem;transition:box-shadow .2s}
+.qh{display:flex;align-items:flex-start;gap:10px;margin-bottom:.85rem}
+.qn{background:var(--navy);color:#fff;font-size:11px;font-weight:700;border-radius:99px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qt{font-size:14px;line-height:1.65;font-weight:500;padding-top:3px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.ob{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--border);border-radius:7px;padding:.65rem .9rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
+.ob:hover:not(:disabled){border-color:var(--navy);background:#eef0f8}
+.ol{background:var(--navy);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ob.correct{border-color:var(--green-b);background:var(--green-bg)}.ob.correct .ol{background:var(--green)}
+.ob.wrong{border-color:var(--red-b);background:var(--red-bg)}.ob.wrong .ol{background:var(--red)}
+.ob.reveal{border-color:var(--green-b);background:var(--green-bg);opacity:.75}.ob.reveal .ol{background:var(--green)}
+.exp{display:none;margin-top:.85rem;background:var(--gold-bg);border-left:4px solid var(--gold);border-radius:0 7px 7px 0;padding:.65rem .9rem;font-size:13px;line-height:1.65;color:#5a4a1a}
+.exp.show{display:block}.exp strong{color:var(--navy)}
+.sub-sec{text-align:center;margin:1.75rem 0}
+#subBtn{background:var(--navy);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.8rem 2.75rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
+#subBtn:hover{background:#253560}#subBtn:active{transform:scale(.97)}#subBtn:disabled{background:#aaa;cursor:not-allowed}
+.warn{display:none;color:var(--red);font-size:12.5px;margin-top:.4rem}
+.rp{display:none;background:var(--white);border:2px solid var(--navy);border-radius:14px;padding:2rem 1.5rem;text-align:center;margin:1.75rem 0}
+.rp.show{display:block}
+.sc{width:110px;height:110px;border-radius:50%;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;border:4px solid var(--gold)}
+.sn{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:700;line-height:1}
+.sl{font-size:11px;color:#aab4cc;margin-top:2px}
+.rt{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.rs{font-size:13px;color:var(--muted);margin-bottom:1.25rem}
+.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.25rem}
+.stat{text-align:center}.stn{font-size:26px;font-weight:700;font-family:'Noto Serif SC',serif}
+.stn.c{color:var(--green)}.stn.w{color:var(--red)}.stl{font-size:11px;color:var(--muted)}
+#retBtn{background:transparent;color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:500;padding:.55rem 1.75rem;border:2px solid var(--navy);border-radius:99px;cursor:pointer;transition:background .2s;margin-right:8px}
+#retBtn:hover{background:#eef0f8}
+.nav-next{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:700;padding:.55rem 1.75rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
+@media(max-width:480px){.qt{font-size:13.5px}.ob{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-sub">马来西亚国家小学课程标准 · KSSR · 六年级历史</div>
+  <h1>模拟考试 — 为郑羽绚精心编制</h1>
+  <div class="set-badge">第 6 套 / 共 10 套</div>
+  <div class="hdr-meta">32 题 · 满分 100 分</div>
+  <div class="pb-wrap"><div class="pb" id="pb"></div></div>
+  <div class="pb-lbl" id="pbl">0 / 32 已作答</div>
+</div>
+<div class="nav">
+  <a href="set1.html" class="">第1套</a><a href="set2.html" class="">第2套</a><a href="set3.html" class="">第3套</a><a href="set4.html" class="">第4套</a><a href="set5.html" class="">第5套</a><a href="set6.html" class="active">第6套</a><a href="set7.html" class="">第7套</a><a href="set8.html" class="">第8套</a><a href="set9.html" class="">第9套</a><a href="set10.html" class="">第10套</a>
+</div>
+<div class="ctr" id="qctr"></div>
+<div class="ctr">
+  <div class="sub-sec">
+    <button id="subBtn" onclick="submit()">提交答案 · 查看成绩</button>
+    <div class="warn" id="wn"></div>
+  </div>
+  <div class="rp" id="rp">
+    <div class="sc"><span class="sn" id="scn">0</span><span class="sl">/ 100</span></div>
+    <div class="rt" id="rtitle"></div>
+    <div class="rs" id="rsub"></div>
+    <div class="rstats">
+      <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
+      <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
+    </div>
+    <button id="retBtn" onclick="reset()">重新作答</button>
+    <a class="nav-next" href="set7.html">下一套 →</a>
+  </div>
+</div>
+<script>
+const Q=[{"q": "以下哪个是马来西亚的国家石油公司？", "opts": ["Shell", "Petronas", "ExxonMobil", "Total"], "ans": 1, "exp": "Petronas（马来西亚国家石油公司）成立于1974年，是马来西亚国有石油公司，管理国内油气资源。"}, {"q": "马来西亚第一个五年发展计划于哪一年开始？", "opts": ["1956年", "1961年", "1966年", "1971年"], "ans": 1, "exp": "马来西亚第一个马来西亚计划（Malaysia Plan）于1961年开始实施，旨在推动经济发展。"}, {"q": "以下哪个计划目标是消除贫穷和重组社会？", "opts": ["第一马来西亚计划", "新经济政策", "国家发展政策", "宏愿2020"], "ans": 1, "exp": "新经济政策（DEB，1971–1990年）的两大目标是消除贫穷（不分种族）和重组社会（改变各族经济地位）。"}, {"q": "宏愿2020（Wawasan 2020）是谁提出的？", "opts": ["敦拉萨", "敦胡先翁", "敦马哈迪", "阿都拉巴达威"], "ans": 2, "exp": "宏愿2020由敦马哈迪于1991年提出，目标是到2020年将马来西亚建设成为一个完全发展的工业国。"}, {"q": "以下哪个是马来西亚的主要工业园区？", "opts": ["多媒体超级走廊", "碧玉谷", "北部走廊", "伊斯干达特区"], "ans": 0, "exp": "多媒体超级走廊（MSC Malaysia，Multimedia Super Corridor）于1996年设立，是马来西亚发展信息科技产业的核心地区。"}, {"q": "马来西亚独立后，以下哪种产业最先成为主要经济支柱？", "opts": ["电子业", "石油业", "橡胶与锡矿", "棕榈油"], "ans": 2, "exp": "独立初期，橡胶与锡矿是马来西亚的主要出口收入来源，构成经济主柱，后来才多元化发展。"}, {"q": "以下哪个是马来西亚最大的棕榈油出口国之一？", "opts": ["是", "否", "不确定", "视年份而定"], "ans": 0, "exp": "马来西亚是世界上最大的棕榈油生产和出口国之一，棕榈油是重要的农业出口商品。"}, {"q": "马来西亚是哪个国际组织的成员，该组织于1989年成立？", "opts": ["APEC", "WTO", "ASEAN", "G20"], "ans": 0, "exp": "马来西亚是亚太经济合作组织（APEC）的成员，APEC于1989年成立，促进亚太地区经济合作。"}, {"q": "联合国成立于哪一年？", "opts": ["1943年", "1945年", "1947年", "1950年"], "ans": 1, "exp": "联合国（United Nations）于1945年10月24日正式成立，马来西亚于1957年独立后加入联合国。"}, {"q": "以下哪个是马来西亚在国际社会中的重要外交政策原则？", "opts": ["不结盟", "亲西方", "反共", "亲中"], "ans": 0, "exp": "马来西亚长期奉行不结盟政策，在东西方冷战中保持中立，同时与各国维持友好关系。"}, {"q": "以下哪位是马来西亚第三任首相？", "opts": ["东姑阿都拉曼", "敦拉萨", "敦胡先翁", "敦马哈迪"], "ans": 2, "exp": "敦胡先翁（Tun Hussein Onn）是马来西亚第三任首相，任期1976–1981年，以廉洁著称，被誉为「马来西亚的良知」。"}, {"q": "以下哪位首相任期最长？", "opts": ["东姑阿都拉曼", "敦拉萨", "敦马哈迪", "阿都拉巴达威"], "ans": 2, "exp": "敦马哈迪（Tun Dr. Mahathir Mohamad）第一次任期1981–2003年，长达22年，是任期最长的马来西亚首相。"}, {"q": "马来西亚在哪一年举办英联邦运动会（Commonwealth Games）？", "opts": ["1994年", "1998年", "2002年", "2006年"], "ans": 1, "exp": "马来西亚于1998年在吉隆坡举办英联邦运动会（Commonwealth Games），这是马来西亚首次主办该赛事。"}, {"q": "以下哪个运动是马来西亚的国家运动（national sport）？", "opts": ["足球", "羽毛球", "曲棍球", "藤球"], "ans": 2, "exp": "曲棍球（Field Hockey）是马来西亚的国家运动（Sukan Kebangsaan），马来西亚曲棍球队曾多次获得亚洲冠军。"}, {"q": "马来西亚在哪一年首次参加奥运会？", "opts": ["1956年", "1964年", "1972年", "1976年"], "ans": 0, "exp": "马来西亚于1956年墨尔本奥运会首次参赛，当时以马来亚联合邦名义出赛。"}, {"q": "以下哪位是马来西亚著名的羽毛球世界冠军？", "opts": ["李宗伟", "林丹", "陈金", "陶菲克"], "ans": 0, "exp": "李宗伟（Lee Chong Wei）是马来西亚最伟大的羽毛球运动员，曾三度荣获奥运银牌，多次获世界排名第一。"}, {"q": "马来西亚在哪一年举办亚洲运动会（Asian Games）？", "opts": ["马来西亚从未举办", "1998年", "2006年", "2014年"], "ans": 0, "exp": "马来西亚尚未举办亚洲运动会（Asian Games），但曾多次举办英联邦运动会及其他国际赛事。"}, {"q": "以下哪个是马来西亚华人最多的州？", "opts": ["雪兰莪", "槟城", "吉隆坡", "霹雳"], "ans": 0, "exp": "雪兰莪州华人人口最多，但按比例而言，槟城华人占该州总人口比例最高，约40%以上。"}, {"q": "马来西亚半岛最南端的州是哪个？", "opts": ["马六甲", "柔佛", "新山", "吉打"], "ans": 1, "exp": "柔佛州位于马来半岛最南端，与新加坡隔柔佛海峡相望，是马来西亚最南部的州。"}, {"q": "以下哪个是马来西亚的主要国际机场？", "opts": ["槟城国际机场", "吉隆坡国际机场", "亚庇国际机场", "古晋国际机场"], "ans": 1, "exp": "吉隆坡国际机场（KLIA）位于雪兰莪州士布爹，是马来西亚最大、最繁忙的国际机场。"}, {"q": "马来西亚的面积约是多少平方公里？", "opts": ["130,000平方公里", "230,000平方公里", "330,000平方公里", "430,000平方公里"], "ans": 2, "exp": "马来西亚总面积约329,847平方公里，由西马（半岛）和东马（沙巴和砂拉越）组成。"}, {"q": "马来西亚人口约有多少（2020年代）？", "opts": ["1500万", "2000万", "3200万", "4500万"], "ans": 2, "exp": "马来西亚人口约3200万（截至2020年代），是一个中等规模的东南亚国家。"}, {"q": "以下哪个节日是马来西亚全国公共假期？", "opts": ["圣诞节", "开斋节", "国庆日", "以上皆是"], "ans": 3, "exp": "开斋节、圣诞节、国庆日等多个节日都是马来西亚的全国公共假期，体现多元文化特色。"}, {"q": "马来西亚宪法中，「马来人」的定义包括以下哪个条件？", "opts": ["肤色", "语言与习俗", "出生地", "父母国籍"], "ans": 1, "exp": "根据宪法第160条，「马来人」定义为信奉伊斯兰教、惯常说马来语、遵循马来习俗，且在马来西亚或新加坡出生或父母为马来人者。"}, {"q": "以下哪个是马来西亚独立后推行的重要教育政策？", "opts": ["1961年教育法令", "剑桥教育法令", "英国教育制度", "荷兰教育制度"], "ans": 0, "exp": "1961年教育法令奠定了马来西亚现代教育制度的基础，以马来语为主要教学媒介语，并保留华文和淡米尔文学校。"}, {"q": "以下哪个是马来西亚最古老的大学？", "opts": ["马来亚大学", "博特拉大学", "理科大学", "国立大学"], "ans": 0, "exp": "马来亚大学（Universiti Malaya，UM）成立于1949年（当时在新加坡），1963年迁至吉隆坡，是马来西亚最古老的大学。"}, {"q": "以下哪个机构负责马来西亚的国家考试？", "opts": ["教育部", "考试局", "国家大学", "大马资格局"], "ans": 1, "exp": "考试局（Lembaga Peperiksaan Malaysia，LPM）负责管理马来西亚的国家考试，包括UPSR、PT3和SPM等。"}, {"q": "以下哪个考试是马来西亚小学的毕业考试？", "opts": ["SPM", "PMR/PT3", "UPSR", "STPM"], "ans": 2, "exp": "UPSR（小学评估考试，Ujian Pencapaian Sekolah Rendah）是马来西亚六年级学生参加的小学毕业考试（现已改革）。"}, {"q": "马来西亚的SPM考试相当于哪个学历？", "opts": ["小学毕业", "初中毕业", "高中毕业", "大学毕业"], "ans": 2, "exp": "SPM（马来西亚教育文凭，Sijil Pelajaran Malaysia）是高中阶段的毕业考试，相当于高中文凭。"}, {"q": "以下哪个是马来西亚最重要的传统建筑风格？", "opts": ["中式建筑", "印度式建筑", "马来传统高脚屋", "殖民地式建筑"], "ans": 2, "exp": "马来传统高脚屋（Rumah Tradisional Melayu）是马来西亚最具代表性的传统建筑，以木材建造，底部架高以防洪水和保持通风。"}, {"q": "以下哪个是马来西亚的传统武术？", "opts": ["功夫", "柔术", "西拉（Silat）", "跆拳道"], "ans": 2, "exp": "武术西拉（Silat Melayu）是马来民族的传统武术，也是马来西亚的文化遗产，常在节庆场合展示。"}, {"q": "以下哪个是马来西亚的国家石油公司？", "opts": ["Shell", "Petronas", "ExxonMobil", "Total"], "ans": 1, "exp": "Petronas（马来西亚国家石油公司）成立于1974年，是马来西亚国有石油公司，管理国内油气资源。"}];
+let A=new Array(Q.length).fill(null),done=false;
+function build(){
+  const c=document.getElementById('qctr');c.innerHTML='';
+  Q.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='qc';d.id='qc'+i;
+    const labs=['A','B','C','D'];
+    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${q.q}</div></div>
+    <div class="opts">${q.opts.map((o,j)=>`<button class="ob" id="o${i}_${j}" onclick="pick(${i},${j})"><span class="ol">${labs[j]}</span><span>${o}</span></button>`).join('')}</div>
+    <div class="exp" id="ex${i}"><strong>✓ 解析：</strong>${q.exp}</div>`;
+    c.appendChild(d);
+  });
+}
+function pick(qi,oi){
+  if(done)return;A[qi]=oi;
+  for(let j=0;j<4;j++){const b=document.getElementById('o'+qi+'_'+j);b.style.borderColor='';b.style.background='';}
+  const s=document.getElementById('o'+qi+'_'+oi);s.style.borderColor='#1a2744';s.style.background='#eef0f8';
+  upd();
+}
+function upd(){
+  const n=A.filter(a=>a!==null).length;
+  document.getElementById('pb').style.width=(n/Q.length*100)+'%';
+  document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
+}
+function submit(){
+  const un=A.filter(a=>a===null).length;
+  if(un>0){const w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
+  done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
+  let ok=0;
+  Q.forEach((q,i)=>{
+    const ua=A[i],ra=q.ans,good=ua===ra;if(good)ok++;
+    for(let j=0;j<4;j++){const b=document.getElementById('o'+i+'_'+j);b.style.borderColor='';b.style.background='';b.disabled=true;
+      if(j===ra&&good&&j===ua)b.classList.add('correct');
+      else if(j===ua&&!good)b.classList.add('wrong');
+      else if(j===ra&&!good)b.classList.add('reveal');
+    }
+    if(!good)document.getElementById('ex'+i).classList.add('show');
+  });
+  const sc=Math.round(ok/Q.length*100);
+  document.getElementById('scn').textContent=sc;
+  document.getElementById('cc').textContent=ok;
+  document.getElementById('wc').textContent=Q.length-ok;
+  let t,s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！';}
+  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题，下次更好！';}
+  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错，仔细看解析，进步会更快！';}
+  else{t='📖 再加把劲！';s='羽绚，不要气馁！读懂解析，再来一次必定进步！';}
+  document.getElementById('rtitle').textContent=t;
+  document.getElementById('rsub').textContent=s;
+  document.getElementById('rp').classList.add('show');
+  document.getElementById('rp').scrollIntoView({behavior:'smooth'});
+}
+function reset(){A=new Array(Q.length).fill(null);done=false;document.getElementById('subBtn').disabled=false;document.getElementById('rp').classList.remove('show');build();upd();window.scrollTo({top:0,behavior:'smooth'});}
+build();upd();
+</script>
+</body>
+</html>
