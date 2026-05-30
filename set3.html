@@ -1,101 +1,101 @@
 <!DOCTYPE html>
 <html lang="zh"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>郑羽绚 · 第3套 — 六年级历史模拟考试</title>
+<title>郑羽绚 · 第3套 — 六年级历史</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--nv:#1a2744;--gd:#d4a017;--gn:#1a7a4a;--gnb:#27ae60;--gnl:#eaf7ee;--rd:#c0392b;--rdb:#e74c3c;--rdl:#fdf0ef;--bdr:#dde2ef;--bg:#f0f2f5;--wh:#fff;--ink:#2c2c2c;--mt:#666}
+:root{--nv:#1a2744;--gd:#d4a017;--gn:#1a7a4a;--gnb:#27ae60;--gnl:#eaf7ee;--rd:#c0392b;--rdb:#e74c3c;--rdl:#fdf0ef;--bd:#dde2ef;--bg:#f0f2f5;--wh:#fff;--ink:#2c2c2c}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
-.hdr{background:var(--nv);color:#fff;padding:1.5rem 1rem 1.2rem;text-align:center;border-bottom:4px solid var(--gd)}
-.hsub{font-size:11px;color:#aab4cc;letter-spacing:.07em;margin-bottom:5px}
-.hdr h1{font-family:'Noto Serif SC',serif;font-size:clamp(16px,4vw,24px);font-weight:700}
-.badge{display:inline-block;background:var(--gd);color:var(--nv);font-size:11px;font-weight:700;padding:3px 11px;border-radius:99px;margin:6px 3px 0}
-.pbw{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:10px auto 0;max-width:340px}
+.hdr{background:var(--nv);color:#fff;padding:1.4rem 1rem 1.1rem;text-align:center;border-bottom:4px solid var(--gd)}
+.hsub{font-size:11px;color:#aab4cc;letter-spacing:.07em;margin-bottom:4px}
+h1{font-family:'Noto Serif SC',serif;font-size:clamp(15px,4vw,23px);font-weight:700}
+.bdg{display:inline-block;font-size:11px;font-weight:700;padding:3px 11px;border-radius:99px;margin:5px 3px 0}
+.b1{background:var(--gd);color:var(--nv)}.b2{background:rgba(255,255,255,.12);color:#c0cadc}
+.pbw{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:9px auto 0;max-width:320px}
 .pb{background:var(--gd);height:5px;border-radius:99px;transition:width .4s;width:0%}
 .pbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
-.nav{background:#111d33;padding:.55rem .75rem;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.07)}
-.nav a{color:#aab4cc;font-size:11.5px;text-decoration:none;padding:4px 9px;border-radius:99px;border:1px solid rgba(255,255,255,.12);transition:all .15s;white-space:nowrap}
+.nav{background:#111d33;padding:.5rem .7rem;display:flex;justify-content:center;gap:5px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.07)}
+.nav a{color:#aab4cc;font-size:11px;text-decoration:none;padding:4px 8px;border-radius:99px;border:1px solid rgba(255,255,255,.12);transition:all .15s;white-space:nowrap}
 .nav a:hover,.nav a.active{background:var(--gd);color:var(--nv);border-color:var(--gd);font-weight:700}
-.ctr{max-width:740px;margin:0 auto;padding:1.2rem 1rem 4rem}
-.qc{background:var(--wh);border:1px solid var(--bdr);border-radius:11px;padding:1.2rem;margin-bottom:.9rem}
-.qh{display:flex;align-items:flex-start;gap:9px;margin-bottom:.8rem}
-.qn{background:var(--nv);color:#fff;font-size:11px;font-weight:700;border-radius:99px;min-width:26px;height:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ctr{max-width:720px;margin:0 auto;padding:1.1rem 1rem 4rem}
+.qc{background:var(--wh);border:1px solid var(--bd);border-radius:11px;padding:1.1rem;margin-bottom:.85rem}
+.qh{display:flex;align-items:flex-start;gap:8px;margin-bottom:.75rem}
+.qn{background:var(--nv);color:#fff;font-size:10px;font-weight:700;border-radius:99px;min-width:25px;height:25px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .qt{font-size:14px;line-height:1.65;font-weight:500;padding-top:2px}
 .opts{display:flex;flex-direction:column;gap:6px}
-.ob{display:flex;align-items:center;gap:9px;background:var(--bg);border:1.5px solid var(--bdr);border-radius:7px;padding:.6rem .85rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
+.ob{display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--bd);border-radius:7px;padding:.58rem .8rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
 .ob:hover:not(:disabled){border-color:var(--nv);background:#e8ecf8}
-.ol{background:var(--nv);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ol{background:var(--nv);color:#fff;font-size:10px;font-weight:700;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ob.correct{border-color:var(--gnb);background:var(--gnl)}.ob.correct .ol{background:var(--gn)}
 .ob.wrong{border-color:var(--rdb);background:var(--rdl)}.ob.wrong .ol{background:var(--rd)}
-.ob.reveal{border-color:var(--gnb);background:var(--gnl);opacity:.7}.ob.reveal .ol{background:var(--gn)}
-.exp{display:none;margin-top:.8rem;background:#fff8e1;border-left:4px solid var(--gd);border-radius:0 7px 7px 0;padding:.65rem .9rem;font-size:13px;line-height:1.65;color:#5a4a1a}
+.ob.reveal{border-color:var(--gnb);background:var(--gnl);opacity:.72}.ob.reveal .ol{background:var(--gn)}
+.exp{display:none;margin-top:.75rem;background:#fff8e1;border-left:4px solid var(--gd);border-radius:0 7px 7px 0;padding:.6rem .85rem;font-size:13px;line-height:1.65;color:#5a4a1a}
 .exp.show{display:block}.exp strong{color:var(--nv)}
-.sub-sec{text-align:center;margin:1.75rem 0}
-#subBtn{background:var(--nv);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.8rem 2.5rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
+.ssec{text-align:center;margin:1.6rem 0}
+#subBtn{background:var(--nv);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.78rem 2.4rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
 #subBtn:hover{background:#253560}#subBtn:active{transform:scale(.97)}#subBtn:disabled{background:#aaa;cursor:not-allowed}
-.warn{display:none;color:var(--rd);font-size:12.5px;margin-top:.45rem}
-.rp{display:none;background:var(--wh);border:2px solid var(--nv);border-radius:14px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0}
+.warn{display:none;color:var(--rd);font-size:12px;margin-top:.4rem}
+.rp{display:none;background:var(--wh);border:2px solid var(--nv);border-radius:14px;padding:1.8rem 1.4rem;text-align:center;margin:1.5rem 0}
 .rp.show{display:block}
-.sc{width:108px;height:108px;border-radius:50%;background:var(--nv);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto .9rem;border:4px solid var(--gd)}
+.sc{width:106px;height:106px;border-radius:50%;background:var(--nv);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto .85rem;border:4px solid var(--gd)}
 .sn{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;line-height:1}
 .sl{font-size:11px;color:#aab4cc;margin-top:2px}
-.rt{font-family:'Noto Serif SC',serif;font-size:19px;font-weight:700;color:var(--nv);margin-bottom:5px}
-.rs{font-size:13px;color:var(--mt);margin-bottom:1.2rem;line-height:1.6}
-.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.2rem}
-.stat{text-align:center}.stn{font-size:26px;font-weight:700;font-family:'Noto Serif SC',serif}
-.stn.c{color:var(--gn)}.stn.w{color:var(--rd)}.stl{font-size:11px;color:var(--mt)}
-.btn-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-#retBtn{background:transparent;color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:500;padding:.55rem 1.6rem;border:2px solid var(--nv);border-radius:99px;cursor:pointer;transition:background .2s}
+.rtl{font-family:'Noto Serif SC',serif;font-size:19px;font-weight:700;color:var(--nv);margin-bottom:4px}
+.rsb{font-size:13px;color:#666;margin-bottom:1.1rem;line-height:1.6}
+.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.1rem}
+.stat{text-align:center}.stn{font-size:25px;font-weight:700;font-family:'Noto Serif SC',serif}
+.stn.c{color:var(--gn)}.stn.w{color:var(--rd)}.stl{font-size:11px;color:#888}
+.brow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+#retBtn{background:transparent;color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:500;padding:.52rem 1.5rem;border:2px solid var(--nv);border-radius:99px;cursor:pointer;transition:background .2s}
 #retBtn:hover{background:#e8ecf8}
-.btn-next{display:inline-block;background:var(--gd);color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13.5px;font-weight:700;padding:.55rem 1.6rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
+.btn-nxt{display:inline-block;background:var(--gd);color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:700;padding:.52rem 1.5rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
 </style></head><body>
 <div class="hdr">
   <div class="hsub">KSSR Semakan 2017 · 六年级历史 · 考试范围：课本第1–55页</div>
   <h1>模拟考试 · 为郑羽绚精心编制</h1>
-  <div class="badge">第 3 套 / 共 10 套</div>
-  <div class="badge" style="background:rgba(255,255,255,.12);color:#c0cadc">Unit 3: 国家原则</div>
+  <span class="bdg b1">第 3 套 / 共 10 套</span>
+  <span class="bdg b2">Unit 3: 国家原则</span>
   <div class="pbw"><div class="pb" id="pb"></div></div>
   <div class="pbl" id="pbl">0 / 32 已作答</div>
 </div>
-<div class="nav"><a href="set1.html">第1套</a><a href="set2.html">第2套</a><a href="set3.html"class="active">第3套</a><a href="set4.html">第4套</a><a href="set5.html">第5套</a><a href="set6.html">第6套</a><a href="set7.html">第7套</a><a href="set8.html">第8套</a><a href="set9.html">第9套</a><a href="set10.html">第10套</a></div>
+<div class="nav"><a href="set1.html">第1套</a><a href="set2.html">第2套</a><a href="set3.html" class="active">第3套</a><a href="set4.html">第4套</a><a href="set5.html">第5套</a><a href="set6.html">第6套</a><a href="set7.html">第7套</a><a href="set8.html">第8套</a><a href="set9.html">第9套</a><a href="set10.html">第10套</a></div>
 <div class="ctr" id="qctr"></div>
 <div class="ctr">
-  <div class="sub-sec">
-    <button id="subBtn" onclick="doSubmit()">提交答案 · 查看成绩</button>
+  <div class="ssec">
+    <button id="subBtn" onclick="doSub()">提交答案 · 查看成绩</button>
     <div class="warn" id="wn"></div>
   </div>
   <div class="rp" id="rp">
     <div class="sc"><span class="sn" id="scn">0</span><span class="sl">/ 100</span></div>
-    <div class="rt" id="rt"></div>
-    <div class="rs" id="rs"></div>
+    <div class="rtl" id="rtl"></div>
+    <div class="rsb" id="rsb"></div>
     <div class="rstats">
       <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
       <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
     </div>
-    <div class="btn-row">
+    <div class="brow">
       <button id="retBtn" onclick="doReset()">重新作答</button>
-      <a class="btn-next" href="set4.html">下一套 →</a>
+      <a class="btn-nxt" href="set4.html">下一套 →</a>
     </div>
   </div>
 </div>
 <script>
-const Q=[{"q": "国家原则（Rukun Negara）于哪一天颁布？", "opts": ["1957年8月31日", "1963年9月16日", "1969年5月13日", "1970年8月31日"], "ans": 3, "exp": "国家原则于1970年8月31日，在马来西亚庆祝独立13周年时正式颁布。"}, {"q": "颁布国家原则的是马来西亚第几任最高元首？", "opts": ["第一任", "第二任", "第三任", "第四任"], "ans": 3, "exp": "国家原则由第四任国家元首苏丹依斯迈纳西鲁丁沙颁布。"}, {"q": "制定国家原则的直接历史背景是什么？", "opts": ["马来西亚成立", "1957年独立", "1969年5月13日事件", "日本占领马来亚"], "ans": 2, "exp": "课文指出，1969年5月13日事件之后，国家行动理事会负责管制马来西亚，国家原则就是在那时制定的。"}, {"q": "国家原则由哪个机构制定？", "opts": ["国会", "国家咨询理事会（MAPEN）属下的国家原则委员会", "内阁特别委员会", "最高元首御前会议"], "ans": 1, "exp": "国家原则于1970年3月4日，由国家咨询理事会（MAPEN）属下的国家原则委员会所制定。"}, {"q": "国家原则的第一项原则是什么？", "opts": ["忠于君国", "维护宪法", "信奉上苍", "培养德行"], "ans": 2, "exp": "国家原则第一项是信奉上苍（Kepercayaan kepada Tuhan），强调宗教信仰的重要性。"}, {"q": "国家原则的第二项原则是什么？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 1, "exp": "国家原则第二项是忠于君国（Kesetiaan kepada Raja dan Negara），强调对最高元首和国家的忠诚。"}, {"q": "国家原则的第三项原则是什么？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 2, "exp": "国家原则第三项是维护宪法（Keluhuran Perlembagaan），强调尊重联邦宪法的崇高地位。"}, {"q": "国家原则的第四项原则是什么？", "opts": ["信奉上苍", "维护宪法", "尊崇法治", "培养德行"], "ans": 2, "exp": "国家原则第四项是尊崇法治（Kedaulatan Undang-Undang），强调法律至上。"}, {"q": "国家原则的第五项原则是什么？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "培养德行"], "ans": 3, "exp": "国家原则第五项是培养德行（Kesopanan dan Kesusilaan），强调培养良好的道德观和行为举止。"}, {"q": "以下哪项不是制定国家原则的原因？", "opts": ["经济地位的落差", "居住地区的分化", "政治理念的不同", "外国侵略威胁"], "ans": 3, "exp": "课文列出制定国家原则的三个原因：经济地位的落差、居住地区的分化、政治理念的不同。"}, {"q": "国家原则颁布时，马来西亚庆祝独立多少周年？", "opts": ["10周年", "11周年", "12周年", "13周年"], "ans": 3, "exp": "马来西亚于1957年独立，1970年8月31日颁布国家原则时，正在庆祝独立13周年。"}, {"q": "国家原则的宗旨是什么？", "opts": ["增加国防开支", "培养团结且具包容态度的国民", "促进对外贸易", "提高国民生产总值"], "ans": 1, "exp": "课文指出，国家原则旨在培养团结且具包容态度的国民，是促进忠诚与爱国精神的指南。"}, {"q": "安沙骑自行车遵守交通规则，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 3, "exp": "课文举例：安沙在来回学校路途中遵守交通规则，体现了尊崇法治的精神。"}, {"q": "马蒂雅娜扶老婆婆过马路，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "培养德行"], "ans": 3, "exp": "课文举例：马蒂雅娜主动扶老婆婆过马路，体现了培养德行的精神。"}, {"q": "伊登参与国会下议院立法，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 2, "exp": "课文举例：伊登参与国会下议院立法的工作，体现了维护宪法的精神。"}, {"q": "沙吉星参加国防部突击队训练，有志捍卫国家主权，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 1, "exp": "课文举例：沙吉星参与突击队训练，有志于贡献国家、捍卫独立性和主权，体现了忠于君国的精神。"}, {"q": "吉塔一家人按各自宗教信仰为病父祈祷，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 0, "exp": "课文举例：吉塔一家人和邻居按各自的宗教信仰为她的父亲祈祷，体现了信奉上苍及族群包容的精神。"}, {"q": "有宗教信仰的社会能避免哪些问题？", "opts": ["交通堵塞", "嫉妒、背叛、贪污、滥用毒品和道德堕落", "农业问题", "经济通胀"], "ans": 1, "exp": "课文指出，有宗教信仰的社会能避免嫉妒、背叛、贪污、滥用毒品和道德堕落。"}, {"q": "课文中青年反毒运动图片说明国家原则的哪项功能？", "opts": ["塑造有宗教信仰的社会", "塑造富有爱国精神的社会", "培养尊重法治的态度", "巩固社会团结"], "ans": 2, "exp": "课文在培养尊重法治的态度部分展示青年反毒运动图片，说明国家原则能引导人民远离犯罪活动。"}, {"q": "国家原则能通过什么方式巩固社会团结？", "opts": ["通过单一文化同化", "通过国人谅解和尊重不同族群的宗教和文化", "通过经济奖励", "通过法律惩罚"], "ans": 1, "exp": "课文指出，通过国家原则，国人能谅解和尊重不同族群的宗教和文化，巩固社会团结。"}, {"q": "课文指出，正直的操守会影响我们哪些方面的表现？", "opts": ["只影响政治", "在教育、事业和生活中的表现", "只影响经济", "只影响宗教"], "ans": 1, "exp": "课文指出，正直的操守会影响我们在教育、事业和生活中的表现。"}, {"q": "国家原则能塑造有高尚情操的社会，诚信的人能避免什么行为？", "opts": ["迟到早退", "在考试中作弊", "不做运动", "不读书"], "ans": 1, "exp": "课文举例，一个有诚信的人能避免在生活中犯错，比如在考试中作弊。"}, {"q": "领会和实践国家原则对个人有什么益处？", "opts": ["获得更多财富", "使我们成为有礼和懂得相互谅解的人", "获得更高政治地位", "赢得国际认可"], "ans": 1, "exp": "课文总结：领会和实践国家原则，使我们成为有礼和懂得相互谅解的人。"}, {"q": "在社会层面，实践国家原则有什么效果？", "opts": ["个人财富增加", "包容与相互谅解，为社会带来和谐与安宁", "军事力量增强", "出口增加"], "ans": 1, "exp": "课文指出，社会层面：包容与相互谅解，为社会带来和谐与安宁。"}, {"q": "在国家层面，实践国家原则有什么效果？", "opts": ["增加外汇储备", "社会和谐与安宁，能巩固国家的稳定和发展", "增加军备", "扩大领土"], "ans": 1, "exp": "课文指出，在国家层面：社会和谐与安宁，能巩固国家的稳定和发展。"}, {"q": "国家原则必须成为马来西亚人民的什么？", "opts": ["娱乐指南", "生活指南", "经济指南", "政治指南"], "ans": 1, "exp": "课文明确指出，国家原则必须成为马来西亚人民的生活指南。"}, {"q": "国家原则培养德行功能中，能塑造什么样的社会？", "opts": ["以经济发展为首的社会", "具有高尚德行的社会，带来和谐与安宁", "军事优先的社会", "崇尚个人主义的社会"], "ans": 1, "exp": "课文指出，国家原则能塑造具有高尚德行的马来西亚社会，为我国社会带来和谐与安宁。"}, {"q": "国家原则培养了各族国民哪三种精神？", "opts": ["竞争、进步、创新", "包容、合作与相互谅解的精神", "独立、自强、个人主义", "排外、保守、固步自封"], "ans": 1, "exp": "课文指出，国家原则培养了各族国民的包容、合作与相互谅解的精神，在塑造国民高尚情操方面至关重要。"}, {"q": "国家原则共有几项原则？", "opts": ["三项", "四项", "五项", "六项"], "ans": 2, "exp": "国家原则共有五项原则：信奉上苍、忠于君国、维护宪法、尊崇法治、培养德行。"}, {"q": "富有爱国精神的国民会尊重哪些国家象征？", "opts": ["首相官邸", "国旗、国徽和国歌", "政党旗帜", "城市标志"], "ans": 1, "exp": "课文指出，富有爱国精神的国民会效忠国家，愿意为国家牺牲，也会尊重国家主权的象征如国旗、国徽和国歌。"}, {"q": "国家原则能引导人民远离什么威胁？", "opts": ["自然灾害", "外国侵略", "威胁治安的犯罪活动", "经济通货膨胀"], "ans": 2, "exp": "课文指出，国家原则能引导人民远离威胁我国治安的犯罪活动，遵守法律能带来社会和谐与安宁。"}, {"q": "成立马来西亚的概念最初由哪两方提出？", "opts": ["马来族和华族", "本地领袖和英国殖民当局", "东南亚各国和联合国", "马来亚和印度尼西亚"], "ans": 1, "exp": "课文明确指出，成立马来西亚的最初概念是由本地领袖和英国殖民当局所提出的。"}];
+const Q=[{"q": "独立前马来族主要居住在哪里，从事什么经济活动？", "opts": ["市镇，采矿", "园丘，橡胶种植", "乡村、沿海地带与河畔，农耕、捕鱼、小生意与公共服务", "内陆，狩猎"], "ans": 2, "exp": "课文指出，独立前，马来族住在乡村、沿海地带与河畔，从事农耕、捕鱼、小生意与公共服务。"}, {"q": "新加坡公投的结果是什么？", "opts": ["人民反对成立马来西亚", "结果各半", "人民支持成立马来西亚", "公投被取消"], "ans": 2, "exp": "新加坡举行的公投结果显示，新加坡人民支持成立马来西亚。"}, {"q": "1957年8月31日在马来西亚历史上代表什么？", "opts": ["马来西亚联邦成立", "马来亚联合邦宣告独立", "《马来西亚协定》签署", "葛波委员会成立"], "ans": 1, "exp": "1957年8月31日是马来亚联合邦宣告独立的日期，马来西亚联邦则于1963年9月16日才正式成立。"}, {"q": "国家原则的宗旨是什么？", "opts": ["增加国防开支", "培养团结且具包容态度的国民", "促进对外贸易", "提高国民生产总值"], "ans": 1, "exp": "课文指出，国家原则旨在培养团结且具包容态度的国民，是促进忠诚与爱国精神的指南。"}, {"q": "国家原则（Rukun Negara）颁布于哪一年哪一天？", "opts": ["1957年8月31日", "1963年9月16日", "1969年5月13日", "1970年8月31日"], "ans": 3, "exp": "国家原则于1970年8月31日，在马来西亚庆祝独立13周年纪念日时正式颁布。"}, {"q": "以下哪项情境体现了维护宪法？", "opts": ["骑自行车遵守交规", "主动扶老婆婆过马路", "参与国会下议院立法工作", "参加突击队训练"], "ans": 2, "exp": "课文举例（伊登）：参与国会下议院立法的工作，体现了维护宪法的精神。"}, {"q": "以下哪项是国家原则忠于君国中君所指的人物？", "opts": ["首相", "州苏丹", "最高元首（Yang di-Pertuan Agong）", "英国国王"], "ans": 2, "exp": "国家原则忠于君国中的君是指马来西亚最高元首（Yang di-Pertuan Agong），国是指马来西亚国家。"}, {"q": "锡克族男性传统服装有什么特征？", "opts": ["穿旗袍", "穿纱丽", "穿长至膝盖的上衣和裤子及缠头巾", "穿绣花哥峇雅"], "ans": 2, "exp": "课文指出，锡克族男性的服装是长至膝盖的上衣和裤子（tahmat/tamba）及缠头巾，头巾是锡克文化的重要象征。"}, {"q": "以下哪个州首府是怡保（Ipoh），历史上以锡矿著称？", "opts": ["彭亨", "雪兰莪", "霹雳", "丁加奴"], "ans": 2, "exp": "霹雳州（Perak）首府怡保（Ipoh），历史上是马来西亚最重要的锡矿产区，怡保曾有锡都之称。"}, {"q": "以下哪个州是马来西亚人口最多、工业最发达的州？", "opts": ["柔佛", "霹雳", "雪兰莪（Selangor）", "彭亨"], "ans": 2, "exp": "雪兰莪州（Selangor）是马来西亚人口最多、工业最发达的州，吉隆坡联邦直辖区由其分出。"}, {"q": "以下哪个族群是沙巴最大的族群？", "opts": ["伊班族", "巴瑶族", "卡达山杜顺族", "龙古斯族"], "ans": 2, "exp": "课文指出，卡达山杜顺族是沙巴最大的族群，其中的族群分支拥有自己的语言。"}, {"q": "课文关于多元族群的核心结论是什么？", "opts": ["各族文化需要被改变", "各族群互相包容且和睦共处是马来西亚的特色，学习各族特色能培养爱国精神", "只需了解本族群特色", "不同族群之间无需了解彼此"], "ans": 1, "exp": "课文结语：各族群互相包容且和睦共处是马来西亚的特色，我们学习和分享各族群特色能够培养爱国精神。"}, {"q": "国家原则第五项（培养德行）的马来文是？", "opts": ["Kepercayaan kepada Tuhan", "Kesetiaan kepada Raja dan Negara", "Keluhuran Perlembagaan", "Kesopanan dan Kesusilaan"], "ans": 3, "exp": "国家原则第五项培养德行的马来文是Kesopanan dan Kesusilaan。"}, {"q": "只合并新加坡与马来亚联合邦会导致什么问题？", "opts": ["经济发展失衡", "族群结构不平衡", "共产党威胁加剧", "基础设施不足"], "ans": 1, "exp": "课文指出，只合并新加坡与马来亚联合邦将导致族群结构不平衡；因此必须加入砂拉越和沙巴以平衡各族人口比例。"}, {"q": "制定国家原则的直接历史背景是什么？", "opts": ["马来西亚加入联合国", "1963年马来西亚成立", "1969年5月13日事件", "日本占领马来亚"], "ans": 2, "exp": "课文指出，1969年5月13日事件之后，国家行动理事会负责管制马来西亚，国家原则就是在那时制定的。"}, {"q": "葛波委员会（Suruhanjaya Cobbold）成立的日期是？", "opts": ["1961年7月23日", "1962年1月17日", "1962年6月21日", "1963年7月9日"], "ans": 1, "exp": "葛波委员会于1962年1月17日成立，目的是进行调查以收集砂拉越与沙巴的民意。"}, {"q": "槟城乔治市（George Town）的历史重要性是什么？", "opts": ["是马来西亚首都", "是英国在马来亚建立的第一个殖民地", "是马来西亚面积最大的州", "是马来西亚第一个宣告独立的州"], "ans": 1, "exp": "槟城（Penang）是英国在马来亚建立的第一个殖民地，弗朗西斯莱特于1786年占领槟城。"}, {"q": "有宗教信仰的社会能避免哪些问题？", "opts": ["交通堵塞", "嫉妒、背叛、贪污、滥用毒品和道德堕落", "农业问题", "经济通胀"], "ans": 1, "exp": "课文指出，有宗教信仰的社会能避免嫉妒、背叛、贪污、滥用毒品和道德堕落。"}, {"q": "沙巴的首府是哪个城市？", "opts": ["古晋", "诗巫", "美里", "亚庇（Kota Kinabalu）"], "ans": 3, "exp": "亚庇（Kota Kinabalu）是沙巴州的首府，以京那巴鲁山著称。"}, {"q": "以下哪个州以其独特的长屋（Rumah Panjang）文化著称，是伊班族的聚居地？", "opts": ["霹雳", "彭亨", "砂拉越（Sarawak）", "雪兰莪"], "ans": 2, "exp": "砂拉越的土著族群，尤其是伊班族，以传统的长屋（Rumah Panjang）文化著称，一栋长屋可容纳多户家庭共同居住。"}, {"q": "砂拉越沿海的马来族、马兰诺族和卡达央族独立前从事什么活动？", "opts": ["种植稻米", "采集森林资源", "经商、造船和生产硕莪", "捕鱼和农耕"], "ans": 2, "exp": "课文指出，住在沿海的马来族、马兰诺族和卡达央族，从事经商、造船和生产硕莪的工作。"}, {"q": "峇峇和娘惹是哪两个群体通婚的后代？", "opts": ["英国人与马来人", "来自中国的商人与马六甲当地女性", "印度商人与华族女性", "葡萄牙人与马来人"], "ans": 1, "exp": "课文指出，峇峇和娘惹是早期来自中国的商人和马六甲当地女性通婚的后代，男性称峇峇（Baba），女性称娘惹（Nyonya）。"}, {"q": "马来西亚成立时汶莱没有加入，最终马来西亚由几个地方组成？", "opts": ["三个", "四个", "五个", "六个"], "ans": 1, "exp": "马来西亚最终由马来亚联合邦、砂拉越、沙巴与新加坡四个地方组成（汶莱没有加入）。"}, {"q": "课文中青年反毒运动图片用来说明国家原则的哪项功能？", "opts": ["塑造有宗教信仰的社会", "塑造富有爱国精神的社会", "培养尊重法治的态度", "巩固社会团结"], "ans": 2, "exp": "课文在培养尊重法治的态度部分展示青年反毒运动图片，说明国家原则能引导人民远离犯罪活动。"}, {"q": "葛波委员会报告于哪一天移交？", "opts": ["1962年1月17日", "1962年6月21日", "1963年7月9日", "1963年8月12日"], "ans": 1, "exp": "葛波委员会于1962年6月21日将民意调查报告移交予英国殖民当局与马来亚联合邦。"}, {"q": "沙巴龙古斯族以什么著名？", "opts": ["造船", "种植稻米", "手工艺品", "采集海产"], "ans": 2, "exp": "课文指出，大部份龙古斯族住在内陆地区，龙古斯族以手工艺品闻名。"}, {"q": "彭亨州最著名的自然保护区是什么？", "opts": ["百乐公园", "塔曼尼加拉国家公园", "京那巴鲁国家公园", "珊瑚公园"], "ans": 1, "exp": "彭亨州拥有著名的塔曼尼加拉国家公园（Taman Negara），是全球最古老的热带雨林之一。"}, {"q": "暹罗族在新年庆祝什么节日？", "opts": ["开斋节", "农历新年", "屠妖节", "泼水节"], "ans": 3, "exp": "课文指出，暹罗族在新年庆祝泼水节，并在暹樾举行仪式时穿上传统服装。"}, {"q": "以下哪个州与印度尼西亚苏门答腊隔马六甲海峡相望？", "opts": ["柔佛", "雪兰莪", "马六甲", "霹雳"], "ans": 2, "exp": "马六甲州与印度尼西亚苏门答腊隔着马六甲海峡相望，马六甲海峡是世界最繁忙航运水道之一。"}, {"q": "以下哪个描述正确说明马来西亚州属的组成？", "opts": ["全部州在马来半岛", "13个州中11个在半岛，2个在婆罗洲", "全部州在婆罗洲", "只有5个州"], "ans": 1, "exp": "马来西亚13个州中，11个（西马）在马来半岛，2个（东马：沙巴和砂拉越）在婆罗洲岛北部。"}, {"q": "东姑阿都拉曼于1955年提出成立马来西亚时，他当时的职务是什么？", "opts": ["马来亚联合邦首相", "马来亚联合邦首席部长", "砂拉越首席部长", "新加坡总理"], "ans": 1, "exp": "课文指出，1955年马来亚联合邦首席部长东姑阿都拉曼提出联合的概念，他建议新加坡、砂拉越、沙巴和汶莱加入马来亚联合邦。"}, {"q": "跨政府委员会（JAK）由哪几方的代表组成？", "opts": ["只有马来亚联合邦代表", "英国、马来亚联合邦、砂拉越与沙巴代表", "联合国代表", "只有英国代表"], "ans": 1, "exp": "课文指出，跨政府委员会由英国、马来亚联合邦、砂拉越与沙巴代表组成，负责制定保障砂拉越与沙巴权益的宪法草案。"}];
 let A=new Array(Q.length).fill(null),done=false;
 function build(){
   const c=document.getElementById('qctr');c.innerHTML='';
   const L=['A','B','C','D'];
   Q.forEach((q,i)=>{
     const d=document.createElement('div');d.className='qc';d.id='qc'+i;
-    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${q.q}</div></div>
-    <div class="opts">${q.opts.map((o,j)=>`<button class="ob" id="o${i}_${j}" onclick="pick(${i},${j})"><span class="ol">${L[j]}</span><span>${o}</span></button>`).join('')}</div>
-    <div class="exp" id="ex${i}"><strong>✓ 解析：</strong>${q.exp}</div>`;
+    const opts=q.opts.map((o,j)=>'<button class="ob" id="o'+i+'_'+j+'" onclick="pick('+i+','+j+')" ><span class="ol">'+L[j]+'</span><span>'+o+'</span></button>').join('');
+    d.innerHTML='<div class="qh"><div class="qn">'+(i+1)+'</div><div class="qt">'+q.q+'</div></div><div class="opts">'+opts+'</div><div class="exp" id="ex'+i+'"><strong>✓ 解析：</strong>'+q.exp+'</div>';
     c.appendChild(d);
   });
 }
 function pick(qi,oi){
   if(done)return;A[qi]=oi;
-  for(let j=0;j<4;j++){const b=document.getElementById('o'+qi+'_'+j);b.style.cssText='';}
+  for(let j=0;j<4;j++)document.getElementById('o'+qi+'_'+j).style.cssText='';
   document.getElementById('o'+qi+'_'+oi).style.cssText='border-color:#1a2744;background:#e8ecf8';
   upd();
 }
@@ -104,13 +104,13 @@ function upd(){
   document.getElementById('pb').style.width=(n/Q.length*100)+'%';
   document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
 }
-function doSubmit(){
+function doSub(){
   const un=A.filter(a=>a===null).length;
   if(un>0){const w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
   done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
   let ok=0;
   Q.forEach((q,i)=>{
-    const ua=A[i],ra=q.ans,good=ua===ra;if(good)ok++;
+    const ua=A[i],ra=q.ans,good=(ua===ra);if(good)ok++;
     for(let j=0;j<4;j++){const b=document.getElementById('o'+i+'_'+j);b.style.cssText='';b.disabled=true;
       if(j===ra&&good&&j===ua)b.classList.add('correct');
       else if(j===ua&&!good)b.classList.add('wrong');
@@ -123,12 +123,12 @@ function doSubmit(){
   document.getElementById('cc').textContent=ok;
   document.getElementById('wc').textContent=Q.length-ok;
   let t,s;
-  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！再接再厉！';}
-  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题的解析，下次一定更好！';}
-  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错！仔细阅读每道错题的解析，你会进步更快的！';}
-  else{t='📖 再加把劲！';s='羽绚，不要气馁！认真读懂每道题的解析，再来一次，必定进步！';}
-  document.getElementById('rt').textContent=t;
-  document.getElementById('rs').textContent=s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！继续努力！';}
+  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题解析，下次会更棒！';}
+  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错！仔细阅读每道错题的解析，进步会更快！';}
+  else{t='📖 再加把劲！';s='羽绚，不要气馁！认真读懂解析，再来一次，一定进步！';}
+  document.getElementById('rtl').textContent=t;
+  document.getElementById('rsb').textContent=s;
   document.getElementById('rp').classList.add('show');
   document.getElementById('rp').scrollIntoView({behavior:'smooth'});
 }
@@ -140,4 +140,5 @@ function doReset(){
   build();upd();window.scrollTo({top:0,behavior:'smooth'});
 }
 build();upd();
-</script></body></html>
+</script>
+</body></html>
