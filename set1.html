@@ -2,16 +2,15 @@
 <html lang="zh"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>郑羽绚 · 第1套 — 六年级历史</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{--nv:#1a2744;--gd:#d4a017;--gn:#1a7a4a;--gnb:#27ae60;--gnl:#eaf7ee;--rd:#c0392b;--rdb:#e74c3c;--rdl:#fdf0ef;--bd:#dde2ef;--bg:#f0f2f5;--wh:#fff;--ink:#2c2c2c}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght+600;700&family=Noto+Sans+SC:wght+400;500;700&display=swap" rel="stylesheet">
+<style>:root{--nv:#1a2744;--gd:#d4a017;--gn:#1a7a4a;--gnb:#27ae60;--gnl:#eaf7ee;--rd:#c0392b;--rdb:#e74c3c;--rdl:#fdf0ef;--bd:#dde2ef;--bg:#f0f2f5;--wh:#fff;--ink:#2c2c2c}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
 .hdr{background:var(--nv);color:#fff;padding:1.4rem 1rem 1.1rem;text-align:center;border-bottom:4px solid var(--gd)}
 .hsub{font-size:11px;color:#aab4cc;letter-spacing:.07em;margin-bottom:4px}
 h1{font-family:'Noto Serif SC',serif;font-size:clamp(15px,4vw,23px);font-weight:700}
-.bdg{display:inline-block;font-size:11px;font-weight:700;padding:3px 11px;border-radius:99px;margin:5px 3px 0}
-.b1{background:var(--gd);color:var(--nv)}.b2{background:rgba(255,255,255,.12);color:#c0cadc}
+.b1{display:inline-block;background:var(--gd);color:var(--nv);font-size:11px;font-weight:700;padding:3px 11px;border-radius:99px;margin:5px 3px 0}
+.b2{display:inline-block;background:rgba(255,255,255,.12);color:#c0cadc;font-size:11px;font-weight:600;padding:3px 11px;border-radius:99px;margin:5px 3px 0}
 .pbw{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:9px auto 0;max-width:320px}
 .pb{background:var(--gd);height:5px;border-radius:99px;transition:width .4s;width:0%}
 .pbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
@@ -49,13 +48,12 @@ h1{font-family:'Noto Serif SC',serif;font-size:clamp(15px,4vw,23px);font-weight:
 .brow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
 #retBtn{background:transparent;color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:500;padding:.52rem 1.5rem;border:2px solid var(--nv);border-radius:99px;cursor:pointer;transition:background .2s}
 #retBtn:hover{background:#e8ecf8}
-.btn-nxt{display:inline-block;background:var(--gd);color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:700;padding:.52rem 1.5rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}
-</style></head><body>
+.bnxt{display:inline-block;background:var(--gd);color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:700;padding:.52rem 1.5rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}</style></head><body>
 <div class="hdr">
   <div class="hsub">KSSR Semakan 2017 · 六年级历史 · 考试范围：课本第1–55页</div>
   <h1>模拟考试 · 为郑羽绚精心编制</h1>
-  <span class="bdg b1">第 1 套 / 共 10 套</span>
-  <span class="bdg b2">Unit 1: 马来西亚的成立</span>
+  <span class="b1">第 1 套 / 共 10 套</span>
+  <span class="b2">Unit 1: 马来西亚的成立</span>
   <div class="pbw"><div class="pb" id="pb"></div></div>
   <div class="pbl" id="pbl">0 / 32 已作答</div>
 </div>
@@ -74,56 +72,54 @@ h1{font-family:'Noto Serif SC',serif;font-size:clamp(15px,4vw,23px);font-weight:
       <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
       <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
     </div>
-    <div class="brow">
-      <button id="retBtn" onclick="doReset()">重新作答</button>
-      <a class="btn-nxt" href="set2.html">下一套 →</a>
-    </div>
+    <div class="brow"><button id="retBtn" onclick="doReset()">重新作答</button><a class="bnxt" href="set2.html">下一套 →</a></div>
   </div>
 </div>
 <script>
-const Q=[{"q": "国家原则培养了各族国民的哪三种精神？", "opts": ["竞争、进步、创新", "包容、合作与相互谅解的精神", "独立、自强、个人主义", "排外、保守、固步自封"], "ans": 1, "exp": "课文指出，国家原则培养了各族国民的包容、合作与相互谅解的精神，在塑造国民高尚情操方面至关重要。"}, {"q": "伊班族男性在嘉华节穿什么传统服装？", "opts": ["旗袍", "陀地", "鸟裳（baju burung）和哥兰比（kelambi）", "马来男装"], "ans": 2, "exp": "课文指出，伊班族男性在嘉华节或婚宴时会穿上鸟裳（baju burung）和哥兰比（kelambi）。"}, {"q": "独立前华族主要居住在哪里，从事什么经济活动？", "opts": ["乡村，捕鱼", "市镇与城市，采矿与经商", "园丘，种植橡胶", "内陆，狩猎"], "ans": 1, "exp": "课文指出，独立前，华族住在市镇与城市，从事采矿与经商。"}, {"q": "马来亚联合邦与新加坡的协商发生在哪一天？", "opts": ["1962年1月17日", "1962年8月30日", "1963年7月9日", "1963年9月16日"], "ans": 1, "exp": "根据课文时间线，1962年8月30日马来亚联合邦与新加坡进行协商。"}, {"q": "制定国家原则的直接历史背景是什么？", "opts": ["马来西亚加入联合国", "1963年马来西亚成立", "1969年5月13日事件", "日本占领马来亚"], "ans": 2, "exp": "课文指出，1969年5月13日事件之后，国家行动理事会负责管制马来西亚，国家原则就是在那时制定的。"}, {"q": "国家原则必须成为马来西亚人民的什么？", "opts": ["娱乐指南", "生活指南", "经济指南", "政治指南"], "ans": 1, "exp": "课文明确指出，国家原则必须成为马来西亚人民的生活指南。"}, {"q": "独立后各族居住模式发生了什么变化？", "opts": ["各族仍然分群居住", "各族群因经济活动而分群居住的问题已获解决，族群间包容精神促使他们一起工作", "各族间冲突加剧", "政府强制各族搬迁"], "ans": 1, "exp": "课文指出，独立与成立马来西亚后，各族群分群居住问题已获解决，族群间包容精神促使他们一起工作，同住一个地区。"}, {"q": "国家原则第一项（信奉上苍）的马来文是？", "opts": ["Kesetiaan kepada Raja dan Negara", "Kepercayaan kepada Tuhan", "Keluhuran Perlembagaan", "Kedaulatan Undang-Undang"], "ans": 1, "exp": "国家原则第一项信奉上苍的马来文是Kepercayaan kepada Tuhan。"}, {"q": "以下哪个州以其独特的长屋（Rumah Panjang）文化著称，是伊班族的聚居地？", "opts": ["霹雳", "彭亨", "砂拉越（Sarawak）", "雪兰莪"], "ans": 2, "exp": "砂拉越的土著族群，尤其是伊班族，以传统的长屋（Rumah Panjang）文化著称，一栋长屋可容纳多户家庭共同居住。"}, {"q": "以下哪个描述正确说明马来西亚州属的组成？", "opts": ["全部州在马来半岛", "13个州中11个在半岛，2个在婆罗洲", "全部州在婆罗洲", "只有5个州"], "ans": 1, "exp": "马来西亚13个州中，11个（西马）在马来半岛，2个（东马：沙巴和砂拉越）在婆罗洲岛北部。"}, {"q": "大马来由（Melayu Raya）主张合并的地区包括哪些？", "opts": ["只有马来半岛和新加坡", "马来半岛、新加坡、加里曼丹、菲律宾群岛与印度尼西亚群岛", "只有砂拉越和沙巴", "只有马来半岛与泰国"], "ans": 1, "exp": "课文指出，大马来由主张把马来半岛、新加坡、加里曼丹、菲律宾群岛与印度尼西亚群岛合并起来。"}, {"q": "马来西亚半岛（西马）共有多少个州？", "opts": ["9个", "11个", "13个", "15个"], "ans": 1, "exp": "马来西亚半岛共有11个州：玻璃市、吉打、槟城、霹雳、吉兰丹、丁加奴、彭亨、雪兰莪、森美兰、马六甲和柔佛。"}, {"q": "马六甲和槟城于哪一年被UNESCO列为世界文化遗产城市？", "opts": ["2000年", "2005年", "2008年", "2010年"], "ans": 2, "exp": "马六甲与槟城乔治市于2008年7月7日被联合国教科文组织列为世界文化遗产城市。"}, {"q": "《马来西亚协定》签署的日期是？", "opts": ["1962年6月21日", "1963年7月9日", "1963年8月12日", "1963年9月16日"], "ans": 1, "exp": "《马来西亚协定》于1963年7月9日在英国伦敦的马尔伯勒大楼（Marlborough House）签署。"}, {"q": "国家原则共有多少项原则？", "opts": ["三项", "四项", "五项", "六项"], "ans": 2, "exp": "国家原则共有五项原则：信奉上苍、忠于君国、维护宪法、尊崇法治、培养德行。"}, {"q": "各族群的文化特色需要大家如何对待？", "opts": ["可以忘记", "改变其文化", "珍惜各族群的文化特色才能发扬光大", "只保留马来族文化"], "ans": 2, "exp": "课文指出，各族群的文化特色需要大家的珍惜，才能发扬光大。"}, {"q": "以下哪个州首府是怡保（Ipoh），历史上以锡矿著称？", "opts": ["彭亨", "雪兰莪", "霹雳", "丁加奴"], "ans": 2, "exp": "霹雳州（Perak）首府怡保（Ipoh），历史上是马来西亚最重要的锡矿产区，怡保曾有锡都之称。"}, {"q": "负责制定国家原则的具体机构是什么？", "opts": ["国会", "内阁特别委员会", "国家咨询理事会（MAPEN）属下的国家原则委员会", "最高元首御前会议"], "ans": 2, "exp": "国家原则于1970年3月4日由国家咨询理事会（MAPEN）属下的国家原则委员会所制定。"}, {"q": "以下哪两个州没有世袭苏丹，由最高元首委任州元首治理？", "opts": ["霹雳和彭亨", "马六甲和槟城", "柔佛和雪兰莪", "吉打和玻璃市"], "ans": 1, "exp": "马六甲和槟城是马来西亚13个州中没有世袭苏丹的州，由最高元首委任的州元首（Yang di-Pertua Negeri）治理。"}, {"q": "成立马来西亚的最初概念包括五个地方，哪个最终没有加入？", "opts": ["砂拉越", "沙巴", "新加坡", "汶莱"], "ans": 3, "exp": "成立马来西亚的最初概念包括马来亚联合邦、砂拉越、沙巴、新加坡与汶莱五个地方，但汶莱最终没有加入。"}, {"q": "马来西亚共有多少个州加上联邦直辖区？", "opts": ["11个州和2个联邦直辖区", "13个州和3个联邦直辖区", "12个州和3个联邦直辖区", "14个州和1个联邦直辖区"], "ans": 1, "exp": "马来西亚由13个州和3个联邦直辖区（吉隆坡、布城、纳闽）组成。"}, {"q": "敦拿督慕斯达法哈仑所属组织是？", "opts": ["砂拉越保守党（PESAKA）", "沙巴民族统一机构（USNO）", "人民行动党（PAP）", "砂拉越国民党（SNAP）"], "ans": 1, "exp": "敦拿督慕斯达法哈仑（Tun Datu Mustapha Datu Harun）是沙巴民族统一机构（USNO）领袖，向沙巴人民解释成立马来西亚的缘由。"}, {"q": "峇峇和娘惹是哪两个群体通婚的后代？", "opts": ["英国人与马来人", "来自中国的商人与马六甲当地女性", "印度商人与华族女性", "葡萄牙人与马来人"], "ans": 1, "exp": "课文指出，峇峇和娘惹是早期来自中国的商人和马六甲当地女性通婚的后代，男性称峇峇（Baba），女性称娘惹（Nyonya）。"}, {"q": "颁布国家原则的是哪一任最高元首？", "opts": ["第二任", "第三任", "第四任", "第五任"], "ans": 2, "exp": "国家原则由第四任国家元首苏丹依斯迈纳西鲁丁沙（Tuanku Sultan Ismail Nasiruddin Shah）颁布。"}, {"q": "峇峇娘惹的传统服装是什么？", "opts": ["旗袍和长衫", "纱丽和陀地", "绣花哥峇雅（kebaya bersulam）和峇迪沙笼（kain batik sarung）", "马来套装和马来男装"], "ans": 2, "exp": "课文指出，峇峇娘惹的传统服装是绣花哥峇雅（kebaya bersulam）和峇迪沙笼（kain batik sarung）。"}, {"q": "以下哪项说明了成立马来西亚与共产党有关的原因？", "opts": ["促进各邦发展", "加快独立步伐", "保障国家安全", "平衡族群结构"], "ans": 2, "exp": "课文指出，共产党不但威胁新加坡，也影响马来亚联合邦的治安，东姑阿都拉曼认为新加坡会成为共产党基地，成立马来西亚能抵御共产党威胁，属于保障国家安全。"}, {"q": "国家原则第三项（维护宪法）的马来文是？", "opts": ["Kedaulatan Undang-Undang", "Kesetiaan kepada Raja dan Negara", "Keluhuran Perlembagaan", "Kesopanan dan Kesusilaan"], "ans": 2, "exp": "国家原则第三项维护宪法的马来文是Keluhuran Perlembagaan。"}, {"q": "跨政府委员会（JAK）由哪几方的代表组成？", "opts": ["只有马来亚联合邦代表", "英国、马来亚联合邦、砂拉越与沙巴代表", "联合国代表", "只有英国代表"], "ans": 1, "exp": "课文指出，跨政府委员会由英国、马来亚联合邦、砂拉越与沙巴代表组成，负责制定保障砂拉越与沙巴权益的宪法草案。"}, {"q": "马来西亚成立宣布仪式在哪几个地方举行？", "opts": ["吉隆坡、槟城、新山、古晋", "吉隆坡、古晋、亚庇、新加坡", "吉隆坡、槟城、怡保、亚庇", "吉隆坡、马六甲、古晋、亚庇"], "ans": 1, "exp": "1963年9月16日，马来西亚成立宣布仪式同时在吉隆坡、砂拉越古晋、沙巴亚庇和新加坡市政厅举行。"}, {"q": "马来西亚半岛11个州中，以下哪个州位于最北端与泰国接壤？", "opts": ["吉打", "吉兰丹", "槟城", "玻璃市（Perlis）"], "ans": 3, "exp": "玻璃市（Perlis）是马来西亚13个州中面积最小的州，位于马来半岛最北端，与泰国直接接壤。"}, {"q": "沙巴龙古斯族以什么著名？", "opts": ["造船", "种植稻米", "手工艺品", "采集海产"], "ans": 2, "exp": "课文指出，大部份龙古斯族住在内陆地区，龙古斯族以手工艺品闻名。"}, {"q": "马来族男性的传统服装叫什么？", "opts": ["旗袍", "纱丽", "马来男装（baju Melayu）", "陀地（doti）"], "ans": 2, "exp": "课文指出，马来族的传统服装以女性马来套装（baju kurung）和男性马来男装（baju Melayu）为大家所熟悉。"}];
+const Q=[{"q": "敦天猛公朱加巴里恩所属的政党是什么？", "opts": ["沙巴民族统一机构（USNO）", "砂拉越国民党（SNAP）", "砂拉越保守党（PESAKA）", "马来民族统一机构（UMNO）"], "ans": 2, "exp": "敦天猛公朱加巴里恩是砂拉越保守党（PESAKA）领袖，也是JSKM成员，并代表砂拉越签署《马来西亚协定》。"}, {"q": "丹斯里拿督阿玛史蒂芬卡隆宁甘所属的政党是什么？", "opts": ["沙统（USNO）", "砂拉越保守党（PESAKA）", "砂拉越国民党（SNAP）", "马来民族统一机构（UMNO）"], "ans": 2, "exp": "丹斯里拿督阿玛史蒂芬卡隆宁甘是砂拉越国民党（SNAP）领袖。"}, {"q": "课文中沙吉星参加国防部突击队训练，有志捍卫国家主权，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "培养德行"], "ans": 1, "exp": "课文举例（沙吉星）：参与突击队训练，有志于贡献国家、捍卫独立性和主权，体现了忠于君国的精神。"}, {"q": "马来西亚由哪些主要族群组成？", "opts": ["只有马来族和华族", "马来族、华族、印度族、半岛原住民、伊班族、卡达山杜顺族等多元族群", "只有三大民族", "只有马来族"], "ans": 1, "exp": "课文指出，马来西亚各族群包括马来族、华族、印度族、半岛原住民、伊班族、马兰诺族、卡达山杜顺族、比达友族、巴瑶族和伊拉农族等。"}, {"q": "马来西亚共有多少个州和联邦直辖区？", "opts": ["11州2联邦直辖区", "12州3联邦直辖区", "13州3联邦直辖区", "14州2联邦直辖区"], "ans": 2, "exp": "马来西亚由13个州和3个联邦直辖区（吉隆坡、布城、纳闽）共16个行政区划组成。"}, {"q": "JSKM的主要目的是什么？", "opts": ["收集砂拉越与沙巴的民意", "加强砂拉越与沙巴领袖对成立马来西亚的信心", "制定宪法草案", "举行公投"], "ans": 1, "exp": "课文指出，成立JSKM是为了加强砂拉越与沙巴领袖对成立马来西亚的信心。"}, {"q": "以下哪个州以稻米产区著称，被誉为马来西亚米仓？", "opts": ["霹雳", "彭亨", "吉打（Kedah）", "柔佛"], "ans": 2, "exp": "吉打州（Kedah）被称为马来西亚的米仓，是全国最重要的稻米产区。"}, {"q": "马六甲和槟城乔治市于哪一年被UNESCO列为世界文化遗产？", "opts": ["2000年", "2005年", "2008年", "2010年"], "ans": 2, "exp": "马六甲与槟城乔治市于2008年7月7日被联合国教科文组织（UNESCO）列为世界文化遗产城市。"}, {"q": "马来半岛最南端的州是哪个，与新加坡隔海峡相望？", "opts": ["马六甲", "森美兰", "柔佛", "雪兰莪"], "ans": 2, "exp": "柔佛州（Johor）位于马来半岛最南端，与新加坡之间以柔佛海峡相隔。"}, {"q": "课文中伊登参与国会下议院立法，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 2, "exp": "课文举例（伊登）：参与国会下议院立法的工作，体现了维护宪法的精神。"}, {"q": "忠于君国（Kesetiaan kepada Raja dan Negara）是国家原则第几项？", "opts": ["第一项", "第二项", "第三项", "第四项"], "ans": 1, "exp": "国家原则第二项是忠于君国（Kesetiaan kepada Raja dan Negara），强调对最高元首和国家的忠诚。"}, {"q": "联合国马来西亚任务调查团（UNMM）于哪一天到访？", "opts": ["1963年7月9日", "1963年8月12日", "1963年9月16日", "1962年6月21日"], "ans": 1, "exp": "联合国马来西亚任务调查团于1963年8月12日到访。"}, {"q": "以下哪个描述正确说明马来西亚13个州的分布？", "opts": ["全部在马来半岛", "11个在半岛（西马），2个在婆罗洲（东马）", "全部在婆罗洲", "只有5个州"], "ans": 1, "exp": "马来西亚13个州中，11个（西马）在马来半岛，2个（东马：沙巴和砂拉越）在婆罗洲岛北部。"}, {"q": "葛波委员会成立于哪一天？", "opts": ["1961年7月23日", "1962年1月17日", "1962年6月21日", "1963年7月9日"], "ans": 1, "exp": "葛波委员会（Suruhanjaya Cobbold）于1962年1月17日成立，目的是收集砂拉越与沙巴的民意。"}, {"q": "独立前马来族主要居住在哪里，从事什么经济活动？", "opts": ["市镇，采矿", "园丘，橡胶种植", "乡村、沿海地带与河畔，农耕、捕鱼、小生意与公共服务", "内陆，狩猎"], "ans": 2, "exp": "课文指出，独立前，马来族住在乡村、沿海地带与河畔，从事农耕、捕鱼、小生意与公共服务。"}, {"q": "马来族以哪种语言沟通，信奉哪种宗教？", "opts": ["华语，佛教", "淡米尔语，印度教", "马来语，伊斯兰教", "英语，基督教"], "ans": 2, "exp": "课文指出，马来族以马来语沟通、遵守马来传统习俗并信奉伊斯兰教。"}, {"q": "锡克族男性传统服装有什么特征？", "opts": ["穿旗袍", "穿纱丽", "穿长至膝盖的上衣和裤子及缠头巾", "穿绣花哥峇雅"], "ans": 2, "exp": "课文指出，锡克族男性的服装是长至膝盖的上衣和裤子（tahmat/tamba）及缠头巾，头巾是锡克文化的重要象征。"}, {"q": "敦拿督慕斯达法哈仑是哪个组织的领袖？", "opts": ["砂拉越保守党（PESAKA）", "沙巴民族统一机构（USNO）", "新加坡人民行动党（PAP）", "砂拉越国民党（SNAP）"], "ans": 1, "exp": "敦拿督慕斯达法哈仑是沙巴民族统一机构（USNO）领袖，他向沙巴人民解释成立马来西亚的缘由。"}, {"q": "仄迪族多数居住在哪里，使用什么语言沟通？", "opts": ["槟城，淡米尔语", "马六甲，克里奥尔马来语（Melayu kreol）", "吉隆坡，英语", "新山，马来语"], "ans": 1, "exp": "课文指出，仄迪族多数居住在马六甲，沟通语是克里奥尔马来语（Melayu kreol）。"}, {"q": "各族群的文化特色需要大家如何对待？", "opts": ["可以遗忘", "改变以同化", "珍惜各族群的文化特色才能发扬光大", "只保留主流文化"], "ans": 2, "exp": "课文指出，各族群的文化特色需要大家的珍惜，才能发扬光大。"}, {"q": "《马来西亚协定》于哪一天签署？", "opts": ["1962年6月21日", "1963年7月9日", "1963年8月12日", "1963年9月16日"], "ans": 1, "exp": "《马来西亚协定》于1963年7月9日在英国伦敦的马尔伯勒大楼签署。"}, {"q": "马来半岛原住民在哪三方面保存各自的传统特色？", "opts": ["语言、宗教和建筑", "手工艺品、草药与语言", "农业、渔业与手工艺", "音乐、舞蹈与语言"], "ans": 1, "exp": "课文指出，马来西亚半岛的原住民在手工艺品、草药与语言方面，仍然坚持保存各自的传统特色。"}, {"q": "国家原则共有多少项原则？", "opts": ["三项", "四项", "五项", "六项"], "ans": 2, "exp": "国家原则共有五项原则：信奉上苍、忠于君国、维护宪法、尊崇法治、培养德行。"}, {"q": "以下哪个州的首府是瓜拉丁加奴，以石油天然气著称？", "opts": ["吉兰丹", "彭亨", "丁加奴（Terengganu）", "霹雳"], "ans": 2, "exp": "丁加奴州首府是瓜拉丁加奴，是马来西亚重要的石油和天然气产区。"}, {"q": "大马来由（Melayu Raya）的概念主张合并哪些地区？", "opts": ["只有马来半岛与汶莱", "马来半岛、新加坡、加里曼丹、菲律宾群岛与印度尼西亚群岛", "只有砂拉越与沙巴", "只有马来半岛与泰国"], "ans": 1, "exp": "大马来由主张把马来半岛、新加坡、加里曼丹、菲律宾群岛与印度尼西亚群岛合并起来。"}, {"q": "马来西亚最高峰京那巴鲁山位于哪个州？", "opts": ["砂拉越", "彭亨", "沙巴", "霹雳"], "ans": 2, "exp": "京那巴鲁山（Mount Kinabalu）海拔4,095米，位于沙巴州，是马来西亚最高峰。"}, {"q": "颁布国家原则时，马来西亚庆祝独立多少周年？", "opts": ["10周年", "11周年", "12周年", "13周年"], "ans": 3, "exp": "马来西亚于1957年独立，1970年8月31日颁布国家原则时，正庆祝独立13周年。"}, {"q": "维护宪法（Keluhuran Perlembagaan）是国家原则第几项？", "opts": ["第一项", "第二项", "第三项", "第四项"], "ans": 2, "exp": "国家原则第三项是维护宪法（Keluhuran Perlembagaan），强调尊重联邦宪法的崇高地位。"}, {"q": "以下哪个州首府是怡保（Ipoh），历史上以锡矿闻名？", "opts": ["彭亨", "雪兰莪", "霹雳（Perak）", "丁加奴"], "ans": 2, "exp": "霹雳州首府怡保（Ipoh）历史上是马来西亚最重要的锡矿产区，怡保曾有锡都之称。"}, {"q": "色拉尼族（Serani）又称什么，是哪两个群体通婚的后代？", "opts": ["峇峇；中国商人与本地女性", "土生印度人；印度商人与本地女性", "欧亚裔；葡萄牙人与本地人", "暹罗人；泰族与马来人"], "ans": 2, "exp": "课文指出，色拉尼族（Serani）又称欧亚裔，是葡萄牙人和本地人通婚的后代。"}, {"q": "课文中吉塔一家人及邻居按各自宗教信仰为病父祈祷，体现了哪项国家原则？", "opts": ["信奉上苍", "忠于君国", "维护宪法", "尊崇法治"], "ans": 0, "exp": "课文举例（吉塔）：一家人和邻居按各自的宗教信仰为她发高烧的父亲祈祷，体现了信奉上苍及族群包容的精神。"}, {"q": "制定国家原则三大原因中的政治因素是什么？", "opts": ["经济地位的落差", "居住地区的分化", "政治理念的不同", "宗教分歧"], "ans": 2, "exp": "制定国家原则的政治因素是政治理念的不同——各族群在政治上的分歧需要通过国家原则来调和。"}];
 let A=new Array(Q.length).fill(null),done=false;
+const L=['A','B','C','D'];
 function build(){
-  const c=document.getElementById('qctr');c.innerHTML='';
-  const L=['A','B','C','D'];
-  Q.forEach((q,i)=>{
-    const d=document.createElement('div');d.className='qc';d.id='qc'+i;
-    const opts=q.opts.map((o,j)=>'<button class="ob" id="o'+i+'_'+j+'" onclick="pick('+i+','+j+')" ><span class="ol">'+L[j]+'</span><span>'+o+'</span></button>').join('');
+  var c=document.getElementById('qctr');c.innerHTML='';
+  Q.forEach(function(q,i){
+    var d=document.createElement('div');d.className='qc';d.id='qc'+i;
+    var opts='';
+    q.opts.forEach(function(o,j){opts+='<button class="ob" id="o'+i+'_'+j+'" onclick="pick('+i+','+j+')"><span class="ol">'+L[j]+'</span><span>'+o+'</span></button>';});
     d.innerHTML='<div class="qh"><div class="qn">'+(i+1)+'</div><div class="qt">'+q.q+'</div></div><div class="opts">'+opts+'</div><div class="exp" id="ex'+i+'"><strong>✓ 解析：</strong>'+q.exp+'</div>';
     c.appendChild(d);
   });
 }
 function pick(qi,oi){
   if(done)return;A[qi]=oi;
-  for(let j=0;j<4;j++)document.getElementById('o'+qi+'_'+j).style.cssText='';
-  document.getElementById('o'+qi+'_'+oi).style.cssText='border-color:#1a2744;background:#e8ecf8';
+  for(var j=0;j<4;j++){var b=document.getElementById('o'+qi+'_'+j);if(b){b.classList.remove('correct','wrong','reveal');b.style.cssText='';}}
+  var s=document.getElementById('o'+qi+'_'+oi);if(s){s.style.cssText='border-color:#1a2744;background:#e8ecf8';}
   upd();
 }
 function upd(){
-  const n=A.filter(a=>a!==null).length;
+  var n=A.filter(function(a){return a!==null;}).length;
   document.getElementById('pb').style.width=(n/Q.length*100)+'%';
   document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
 }
 function doSub(){
-  const un=A.filter(a=>a===null).length;
-  if(un>0){const w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
+  var un=A.filter(function(a){return a===null;}).length;
+  if(un>0){var w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
   done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
-  let ok=0;
-  Q.forEach((q,i)=>{
-    const ua=A[i],ra=q.ans,good=(ua===ra);if(good)ok++;
-    for(let j=0;j<4;j++){const b=document.getElementById('o'+i+'_'+j);b.style.cssText='';b.disabled=true;
-      if(j===ra&&good&&j===ua)b.classList.add('correct');
-      else if(j===ua&&!good)b.classList.add('wrong');
-      else if(j===ra&&!good)b.classList.add('reveal');
-    }
-    if(!good)document.getElementById('ex'+i).classList.add('show');
+  var ok=0;
+  Q.forEach(function(q,i){
+    var ua=A[i],ra=q.ans,good=(ua===ra);if(good)ok++;
+    for(var j=0;j<4;j++){var b=document.getElementById('o'+i+'_'+j);if(b){b.style.cssText='';b.disabled=true;
+      if(j===ra&&good&&j===ua){b.classList.add('correct');}
+      else if(j===ua&&!good){b.classList.add('wrong');}
+      else if(j===ra&&!good){b.classList.add('reveal');}
+    }}
+    if(!good){var e=document.getElementById('ex'+i);if(e)e.classList.add('show');}
   });
-  const sc=Math.round(ok/Q.length*100);
+  var sc=Math.round(ok/Q.length*100);
   document.getElementById('scn').textContent=sc;
   document.getElementById('cc').textContent=ok;
   document.getElementById('wc').textContent=Q.length-ok;
-  let t,s;
-  if(sc>=90){t='🏆 非常出色！';s='羽绚，你的历史知识非常扎实，满分指日可待！继续努力！';}
+  var t,s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，历史知识非常扎实，满分指日可待！继续努力！';}
   else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题解析，下次会更棒！';}
   else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错！仔细阅读每道错题的解析，进步会更快！';}
   else{t='📖 再加把劲！';s='羽绚，不要气馁！认真读懂解析，再来一次，一定进步！';}
@@ -140,5 +136,4 @@ function doReset(){
   build();upd();window.scrollTo({top:0,behavior:'smooth'});
 }
 build();upd();
-</script>
-</body></html>
+</script></body></html>
