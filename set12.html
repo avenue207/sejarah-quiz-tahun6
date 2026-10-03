@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>郑羽绚 · 第12套 — 六年级历史</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>:root{--nv:#1a2744;--gd:#d4a017;--gn:#1a7a4a;--gnb:#27ae60;--gnl:#eaf7ee;--rd:#c0392b;--rdb:#e74c3c;--rdl:#fdf0ef;--bd:#dde2ef;--bg:#f0f2f5;--wh:#fff;--ink:#2c2c2c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+.hdr{background:var(--nv);color:#fff;padding:1.4rem 1rem 1.1rem;text-align:center;border-bottom:4px solid var(--gd)}
+.hsub{font-size:11px;color:#aab4cc;letter-spacing:.07em;margin-bottom:4px}
+h1{font-family:'Noto Serif SC',serif;font-size:clamp(15px,4vw,23px);font-weight:700}
+.b1{display:inline-block;background:var(--gd);color:var(--nv);font-size:11px;font-weight:700;padding:3px 11px;border-radius:99px;margin:5px 3px 0}
+.b2{display:inline-block;background:rgba(255,255,255,.12);color:#c0cadc;font-size:11px;font-weight:600;padding:3px 11px;border-radius:99px;margin:5px 3px 0}
+.pbw{background:rgba(255,255,255,.15);border-radius:99px;height:5px;margin:9px auto 0;max-width:320px}
+.pb{background:var(--gd);height:5px;border-radius:99px;transition:width .4s;width:0%}
+.pbl{font-size:11px;color:#aab4cc;text-align:center;margin-top:3px}
+.nav{background:#111d33;padding:.5rem .7rem;display:flex;justify-content:center;gap:5px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.07)}
+.nav a{color:#aab4cc;font-size:11px;text-decoration:none;padding:4px 8px;border-radius:99px;border:1px solid rgba(255,255,255,.12);transition:all .15s;white-space:nowrap}
+.nav a:hover,.nav a.active{background:var(--gd);color:var(--nv);border-color:var(--gd);font-weight:700}
+.ctr{max-width:720px;margin:0 auto;padding:1.1rem 1rem 4rem}
+.qc{background:var(--wh);border:1px solid var(--bd);border-radius:11px;padding:1.1rem;margin-bottom:.85rem}
+.qh{display:flex;align-items:flex-start;gap:8px;margin-bottom:.75rem}
+.qn{background:var(--nv);color:#fff;font-size:10px;font-weight:700;border-radius:99px;min-width:25px;height:25px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qt{font-size:14px;line-height:1.65;font-weight:500;padding-top:2px}
+.opts{display:flex;flex-direction:column;gap:6px}
+.ob{display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--bd);border-radius:7px;padding:.58rem .8rem;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13.5px;text-align:left;transition:border-color .15s,background .15s;color:var(--ink)}
+.ob:hover:not(:disabled){border-color:var(--nv);background:#e8ecf8}
+.ol{background:var(--nv);color:#fff;font-size:10px;font-weight:700;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ob.correct{border-color:var(--gnb);background:var(--gnl)}.ob.correct .ol{background:var(--gn)}
+.ob.wrong{border-color:var(--rdb);background:var(--rdl)}.ob.wrong .ol{background:var(--rd)}
+.ob.reveal{border-color:var(--gnb);background:var(--gnl);opacity:.72}.ob.reveal .ol{background:var(--gn)}
+.exp{display:none;margin-top:.75rem;background:#fff8e1;border-left:4px solid var(--gd);border-radius:0 7px 7px 0;padding:.6rem .85rem;font-size:13px;line-height:1.65;color:#5a4a1a}
+.exp.show{display:block}.exp strong{color:var(--nv)}
+.ssec{text-align:center;margin:1.6rem 0}
+#subBtn{background:var(--nv);color:#fff;font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:700;padding:.78rem 2.4rem;border:none;border-radius:99px;cursor:pointer;letter-spacing:.07em;transition:background .2s}
+#subBtn:hover{background:#253560}#subBtn:active{transform:scale(.97)}#subBtn:disabled{background:#aaa;cursor:not-allowed}
+.warn{display:none;color:var(--rd);font-size:12px;margin-top:.4rem}
+.rp{display:none;background:var(--wh);border:2px solid var(--nv);border-radius:14px;padding:1.8rem 1.4rem;text-align:center;margin:1.5rem 0}
+.rp.show{display:block}
+.sc{width:106px;height:106px;border-radius:50%;background:var(--nv);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto .85rem;border:4px solid var(--gd)}
+.sn{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;line-height:1}
+.sl{font-size:11px;color:#aab4cc;margin-top:2px}
+.rtl{font-family:'Noto Serif SC',serif;font-size:19px;font-weight:700;color:var(--nv);margin-bottom:4px}
+.rsb{font-size:13px;color:#666;margin-bottom:1.1rem;line-height:1.6}
+.rstats{display:flex;justify-content:center;gap:2rem;margin-bottom:1.1rem}
+.stat{text-align:center}.stn{font-size:25px;font-weight:700;font-family:'Noto Serif SC',serif}
+.stn.c{color:var(--gn)}.stn.w{color:var(--rd)}.stl{font-size:11px;color:#888}
+.brow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+#retBtn{background:transparent;color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:500;padding:.52rem 1.5rem;border:2px solid var(--nv);border-radius:99px;cursor:pointer;transition:background .2s}
+#retBtn:hover{background:#e8ecf8}
+.bnxt{display:inline-block;background:var(--gd);color:var(--nv);font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:700;padding:.52rem 1.5rem;border-radius:99px;text-decoration:none;letter-spacing:.04em}</style></head><body>
+<div class="hdr">
+  <div class="hsub">KSSR Semakan 2017 · 六年级历史 · 考试范围：Unit 1–9 全册</div>
+  <h1>模拟考试 · 为郑羽绚精心编制</h1>
+  <span class="b1">第 12 套 / 共 14 套</span>
+  <span class="b2">Unit 1–9 综合复习 · 36 题</span>
+  <div class="pbw"><div class="pb" id="pb"></div></div>
+  <div class="pbl" id="pbl">0 / 36 已作答</div>
+</div>
+<div class="nav"><a href="set1.html">第1套</a><a href="set2.html">第2套</a><a href="set3.html">第3套</a><a href="set4.html">第4套</a><a href="set5.html">第5套</a><a href="set6.html">第6套</a><a href="set7.html">第7套</a><a href="set8.html">第8套</a><a href="set9.html">第9套</a><a href="set10.html">第10套</a><a href="set11.html">第11套</a><a href="set12.html" class="active">第12套</a><a href="set13.html">第13套</a><a href="set14.html">第14套</a></div>
+<div class="ctr" id="qctr"></div>
+<div class="ctr">
+  <div class="ssec">
+    <button id="subBtn" onclick="doSub()">提交答案 · 查看成绩</button>
+    <div class="warn" id="wn"></div>
+  </div>
+  <div class="rp" id="rp">
+    <div class="sc"><span class="sn" id="scn">0</span><span class="sl">/ 100</span></div>
+    <div class="rtl" id="rtl"></div>
+    <div class="rsb" id="rsb"></div>
+    <div class="rstats">
+      <div class="stat"><div class="stn c" id="cc">0</div><div class="stl">答对</div></div>
+      <div class="stat"><div class="stn w" id="wc">0</div><div class="stl">答错</div></div>
+    </div>
+    <div class="brow"><button id="retBtn" onclick="doReset()">重新作答</button><a class="bnxt" href="set13.html">下一套 →</a></div>
+  </div>
+</div>
+<script>const Q=[{"q": "以下哪位马来西亚领袖率领代表团赴伦敦谈判独立？", "opts": ["敦阿都拉萨", "东姑阿都拉曼", "敦胡先翁", "敦马哈迪"], "ans": 1, "exp": "东姑阿都拉曼于1956年率领代表团赴英国伦敦与英国政府谈判独立事宜，成功争取1957年独立。"}, {"q": "以下哪个是暹罗族在新年庆祝的传统节日？", "opts": ["开斋节", "嘉华节", "泼水节", "卫塞节"], "ans": 2, "exp": "课文指出，暹罗族在新年庆祝泼水节（Songkran），并在暹樾举行仪式时穿上传统服装。"}, {"q": "印度教的礼拜场所称为什么？", "opts": ["清真寺（Masjid）", "印度庙（Kuil Hindu/Kuil）", "教堂（Gereja）", "神庙（Tokong）"], "ans": 1, "exp": "印度教的礼拜场所称为印度庙（Kuil Hindu），是印度裔信徒进行宗教礼拜和节庆活动的场所。"}, {"q": "以下哪个是马来西亚传统竞技游戏，参与者以脚踢藤制球？", "opts": ["Gasing（陀螺）", "Wau（风筝）", "Sepak Takraw（藤球）", "Congkak（子母棋）"], "ans": 2, "exp": "藤球（Sepak Takraw）是马来西亚传统竞技游戏，参与者以脚踢藤制球，类似排球但只能用脚。"}, {"q": "以下哪个族群是沙巴最大的族群？", "opts": ["伊班族", "巴瑶族", "卡达山杜顺族", "龙古斯族"], "ans": 2, "exp": "课文指出，卡达山杜顺族是沙巴最大的族群，其中的族群分支拥有自己的语言。"}, {"q": "联邦土地发展局（FELDA）成立的主要目的是什么？", "opts": ["管理石油资源", "开发新土地并安置贫穷农民种植棕榈油和橡胶", "管理电子工业", "促进旅游业发展"], "ans": 1, "exp": "FELDA（联邦土地发展局）成立于1956年，通过开发新土地并将贫穷农民迁入种植棕榈油和橡胶，以消除农村贫穷。"}, {"q": "以下哪个节日是华裔最重要的传统节日，以舞狮和发红包为传统习俗？", "opts": ["开斋节", "华人新年（农历新年）", "屠妖节", "卫塞节"], "ans": 1, "exp": "华人新年（农历新年）是华裔最重要的传统节日，以舞狮、发红包（压岁钱）、拜年等传统习俗庆祝。"}, {"q": "马来西亚风筝（Wau）在哪个州最为著名，是哪个族群的传统文化？", "opts": ["雪兰莪，华族", "吉兰丹，马来族", "霹雳，印度族", "槟城，峇峇娘惹"], "ans": 1, "exp": "马来风筝（Wau）在吉兰丹州最为著名，是马来族的传统文化，以月形风筝（Wau Bulan）最具代表性。"}, {"q": "培养德行（Kesopanan dan Kesusilaan）是国家原则第几项？", "opts": ["第二项", "第三项", "第四项", "第五项"], "ans": 3, "exp": "国家原则第五项是培养德行（Kesopanan dan Kesusilaan），强调培养良好道德观和行为举止。"}, {"q": "马来西亚最高峰京那巴鲁山（海拔4,095米）位于哪个州？", "opts": ["砂拉越", "彭亨", "沙巴", "霹雳"], "ans": 2, "exp": "京那巴鲁山（Mount Kinabalu）位于沙巴州，是马来西亚及东南亚最高峰之一。"}, {"q": "颁布国家原则的是马来西亚第几任最高元首？", "opts": ["第二任", "第三任", "第四任", "第五任"], "ans": 2, "exp": "国家原则由第四任国家元首苏丹依斯迈纳西鲁丁沙颁布。"}, {"q": "以下哪个州的首府是哥打巴鲁（Kota Bharu），以传统马来文化著称？", "opts": ["丁加奴", "彭亨", "吉兰丹（Kelantan）", "霹雳"], "ans": 2, "exp": "吉兰丹州首府哥打巴鲁，以保存马来传统文化著称，包括皮影戏、风筝等。"}, {"q": "马来西亚曲棍球队曾多次获得哪个亚洲冠军赛的冠军？", "opts": ["亚运会曲棍球金牌", "亚洲曲棍球锦标赛", "东运会曲棍球金牌", "英联邦运动会曲棍球金牌"], "ans": 1, "exp": "马来西亚曲棍球队曾多次获得亚洲曲棍球锦标赛冠军，是亚洲最强的曲棍球队之一。"}, {"q": "以下哪个族群是砂拉越最大的族群？", "opts": ["马兰诺族", "卡达山杜顺族", "伊班族", "比达友族"], "ans": 2, "exp": "课文明确指出，伊班族是砂拉越最大的族群，他们的沟通语言是伊班语。"}, {"q": "敦马哈迪提出了什么重要的国家发展愿景？", "opts": ["新经济政策", "看东方政策和宏愿2020", "国家团结政策", "绿色科技政策"], "ans": 1, "exp": "敦马哈迪提出两大重要政策：看东方政策（1981年，向日韩学习）和宏愿2020（1991年，目标成为发达国家）。"}, {"q": "马来西亚庆祝节庆的开放日（Rumah Terbuka）传统体现了什么精神？", "opts": ["竞争精神", "包容、尊重与族群团结的精神", "单一文化精神", "宗教优越精神"], "ans": 1, "exp": "开放日传统体现了马来西亚人民包容、尊重与族群团结的精神，是促进各族和谐共处的重要社会习俗。"}, {"q": "马来西亚的多媒体超级走廊（MSC Malaysia）成立于哪一年，主要目的是什么？", "opts": ["1990年，发展农业", "1994年，发展旅游业", "1996年，发展信息科技产业", "2000年，发展制造业"], "ans": 2, "exp": "多媒体超级走廊（MSC Malaysia）于1996年设立，是马来西亚发展信息科技（ICT）产业的核心地区。"}, {"q": "马来西亚半岛（西马）共有多少个州？", "opts": ["9个", "11个", "13个", "15个"], "ans": 1, "exp": "马来西亚半岛共有11个州：玻璃市、吉打、槟城、霹雳、吉兰丹、丁加奴、彭亨、雪兰莪、森美兰、马六甲和柔佛。"}, {"q": "东姑阿都拉曼（Tunku Abdul Rahman）被誉为什么？", "opts": ["马来西亚经济之父", "马来西亚国父", "马来西亚教育之父", "马来西亚独立运动先驱"], "ans": 1, "exp": "东姑阿都拉曼被誉为马来西亚国父（Bapa Malaysia），他领导马来亚独立并成为马来西亚第一任首相。"}, {"q": "马来西亚的国家领袖在国家发展中最重要的贡献是什么？", "opts": ["增加国防开支", "通过协商与合作促进国家团结与发展", "推动单一民族政策", "加强与外国的军事联盟"], "ans": 1, "exp": "马来西亚国家领袖最重要的贡献是通过协商与合作，促进各族团结与国家发展，为人民谋求福祉。"}, {"q": "伊斯兰教的礼拜场所称为什么？", "opts": ["庙宇（Kuil）", "教堂（Gereja）", "清真寺（Masjid）", "神庙（Tokong）"], "ans": 2, "exp": "伊斯兰教的礼拜场所称为清真寺（Masjid），是穆斯林进行礼拜和宗教活动的神圣场所。"}, {"q": "马来半岛原住民分为哪三大族群？", "opts": ["伊班族、比达友族、马兰诺族", "尼格利陀族（塞芒族）、塞诺伊族、原始马来人", "卡达山族、龙古斯族、苏禄族", "华族、印度族、马来族"], "ans": 1, "exp": "课文指出，马来西亚半岛原住民分为三大族群：尼格利陀族（又称塞芒族）、塞诺伊族和原始马来人。"}, {"q": "东姑阿都拉曼在成立马来西亚大典上高呼了几声默迪卡？", "opts": ["三声", "五声", "七声", "九声"], "ans": 2, "exp": "课文图片说明记载：东姑阿都拉曼在宣布马来西亚成立的大典上高呼七声默迪卡。"}, {"q": "峇峇和娘惹是哪两个群体通婚的后代？", "opts": ["英国人与马来人", "来自中国的商人与马六甲当地女性", "印度商人与华族女性", "葡萄牙人与马来人"], "ans": 1, "exp": "课文指出，峇峇和娘惹是早期来自中国的商人和马六甲当地女性通婚的后代，男称峇峇，女称娘惹。"}, {"q": "马来西亚于哪一年首次参加奥运会？", "opts": ["1952年", "1956年", "1960年", "1964年"], "ans": 1, "exp": "马来西亚（当时以马来亚联合邦名义）于1956年墨尔本奥运会首次参赛，开启了马来西亚的奥运历程。"}, {"q": "新加坡公投的结果是什么？", "opts": ["人民反对", "投票各半", "人民支持成立马来西亚", "公投被取消"], "ans": 2, "exp": "新加坡举行的公投结果显示，新加坡人民支持成立马来西亚。"}, {"q": "马来西亚国家石油公司（Petronas）成立于哪一年？", "opts": ["1966年", "1970年", "1974年", "1980年"], "ans": 2, "exp": "Petronas（马来西亚国家石油公司）成立于1974年，负责管理马来西亚的石油和天然气资源。"}, {"q": "哈芝节（Hari Raya Aidiladha）是哪种宗教的节日，有什么重要宗教意义？", "opts": ["佛教，纪念佛陀成道", "印度教，庆祝稻米丰收", "伊斯兰教，纪念先知易卜拉欣的献祭精神", "基督教，纪念耶稣复活"], "ans": 2, "exp": "哈芝节（Hari Raya Aidiladha）是伊斯兰教重要节日，也称忠孝节，纪念先知易卜拉欣愿意献祭的精神，并与麦加朝圣（Haji）同期庆祝。"}, {"q": "葛波委员会的报告显示什么结果？", "opts": ["全部人民反对", "三分之一人民支持", "三分之二的砂拉越与沙巴人民支持成立马来西亚", "投票各半"], "ans": 2, "exp": "葛波委员会报告显示，三分之二的砂拉越与沙巴人民支持成立马来西亚。"}, {"q": "马来西亚经济从农业型转向工业型，这一转变主要发生在哪个年代？", "opts": ["1950年代", "1960年代", "1970–1980年代", "1990年代"], "ans": 2, "exp": "马来西亚经济从农业型（主要依赖橡胶和锡矿）转向工业型（制造业和电子业）的转变主要发生在1970–1980年代，受惠于新经济政策和工业化政策。"}, {"q": "以哪个州以稻米产区著称，被誉为马来西亚米仓？", "opts": ["霹雳", "彭亨", "吉打（Kedah）", "柔佛"], "ans": 2, "exp": "吉打州（Kedah）被称为马来西亚的米仓，是全国最重要的稻米产区。"}, {"q": "马来族和马来西亚土著普遍信奉哪种宗教？", "opts": ["佛教", "基督教", "印度教", "伊斯兰教"], "ans": 3, "exp": "马来族及马来西亚土著普遍信奉伊斯兰教，并遵守伊斯兰教义与传统习俗。"}, {"q": "制定国家原则的直接历史背景是什么事件？", "opts": ["马来西亚成立", "1957年独立", "1969年5月13日事件", "日本占领马来亚"], "ans": 2, "exp": "1969年5月13日事件之后，国家行动理事会负责管制马来西亚，国家原则就是在那时制定的。"}, {"q": "国家原则颁布时，马来西亚庆祝独立多少周年？", "opts": ["10周年", "11周年", "12周年", "13周年"], "ans": 3, "exp": "马来西亚于1957年独立，1970年8月31日颁布国家原则时，正庆祝独立13周年。"}, {"q": "马来西亚各族宗教和谐共处体现了什么？", "opts": ["单一文化的优势", "马来西亚多元宗教和谐共存的独特国情", "宗教竞争的结果", "政府强制推行的政策"], "ans": 1, "exp": "马来西亚多元宗教和谐共处是马来西亚的独特国情，各族按自己的宗教信仰生活，彼此尊重包容。"}, {"q": "东姑阿都拉曼于哪里首次提出成立马来西亚的概念？", "opts": ["吉隆坡默迪卡广场", "新加坡艾德菲酒店", "伦敦马尔伯勒大楼", "砂拉越古晋"], "ans": 1, "exp": "东姑阿都拉曼于1961年5月27日在新加坡艾德菲（Adelphi）酒店提出成立马来西亚的概念。"}];
+let A=new Array(Q.length).fill(null),done=false;
+const L=['A','B','C','D'];
+function build(){
+  var c=document.getElementById('qctr');c.innerHTML='';
+  Q.forEach(function(q,i){
+    var d=document.createElement('div');d.className='qc';d.id='qc'+i;
+    var opts='';
+    q.opts.forEach(function(o,j){opts+='<button class="ob" id="o'+i+'_'+j+'" onclick="pick('+i+','+j+')"><span class="ol">'+L[j]+'</span><span>'+o+'</span></button>';});
+    d.innerHTML='<div class="qh"><div class="qn">'+(i+1)+'</div><div class="qt">'+q.q+'</div></div><div class="opts">'+opts+'</div><div class="exp" id="ex'+i+'"><strong>✓ 解析：</strong>'+q.exp+'</div>';
+    c.appendChild(d);
+  });
+}
+function pick(qi,oi){
+  if(done)return;A[qi]=oi;
+  for(var j=0;j<4;j++){var b=document.getElementById('o'+qi+'_'+j);if(b){b.classList.remove('correct','wrong','reveal');b.style.cssText='';}}
+  var s=document.getElementById('o'+qi+'_'+oi);if(s){s.style.cssText='border-color:#1a2744;background:#e8ecf8';}
+  upd();
+}
+function upd(){
+  var n=A.filter(function(a){return a!==null;}).length;
+  document.getElementById('pb').style.width=(n/Q.length*100)+'%%';
+  document.getElementById('pbl').textContent=n+' / '+Q.length+' 已作答';
+}
+function doSub(){
+  var un=A.filter(function(a){return a===null;}).length;
+  if(un>0){var w=document.getElementById('wn');w.style.display='block';w.textContent='⚠ 还有 '+un+' 道题未作答，请完成后再提交。';return;}
+  done=true;document.getElementById('wn').style.display='none';document.getElementById('subBtn').disabled=true;
+  var ok=0;
+  Q.forEach(function(q,i){
+    var ua=A[i],ra=q.ans,good=(ua===ra);if(good)ok++;
+    for(var j=0;j<4;j++){var b=document.getElementById('o'+i+'_'+j);if(b){b.style.cssText='';b.disabled=true;
+      if(j===ra&&good&&j===ua){b.classList.add('correct');}
+      else if(j===ua&&!good){b.classList.add('wrong');}
+      else if(j===ra&&!good){b.classList.add('reveal');}
+    }}
+    if(!good){var e=document.getElementById('ex'+i);if(e)e.classList.add('show');}
+  });
+  var sc=Math.round(ok/Q.length*100);
+  document.getElementById('scn').textContent=sc;
+  document.getElementById('cc').textContent=ok;
+  document.getElementById('wc').textContent=Q.length-ok;
+  var t,s;
+  if(sc>=90){t='🏆 非常出色！';s='羽绚，历史知识非常扎实，满分指日可待！继续努力！';}
+  else if(sc>=75){t='🌟 做得很好！';s='羽绚，成绩优异！认真复习错题解析，下次会更棒！';}
+  else if(sc>=60){t='👍 继续加油！';s='羽绚，基础不错！仔细阅读每道错题的解析，进步会更快！';}
+  else{t='📖 再加把劲！';s='羽绚，不要气馁！认真读懂解析，再来一次，一定进步！';}
+  document.getElementById('rtl').textContent=t;
+  document.getElementById('rsb').textContent=s;
+  document.getElementById('rp').classList.add('show');
+  document.getElementById('rp').scrollIntoView({behavior:'smooth'});
+}
+function doReset(){
+  A=new Array(Q.length).fill(null);done=false;
+  document.getElementById('subBtn').disabled=false;
+  document.getElementById('rp').classList.remove('show');
+  document.getElementById('wn').style.display='none';
+  build();upd();window.scrollTo({top:0,behavior:'smooth'});
+}
+build();upd();</script></body></html>
